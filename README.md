@@ -21,7 +21,7 @@ npm run preview   # prévisualisation du build
 npm run lint      # ESLint
 ```
 
-Node 20 ou supérieur.
+Node 22 ou supérieur (la CI utilise Node 24).
 
 ---
 
