@@ -1,7 +1,6 @@
 import Icon from '../ui/Icon';
 import Media from '../ui/Media';
 import Reveal from '../ui/Reveal';
-import ScriptMark from '../ui/ScriptMark';
 import SectionHeader from '../ui/SectionHeader';
 import media from '../../data/media';
 import { needs } from '../../data/site';
@@ -28,7 +27,6 @@ export default function Needs() {
 
           <Reveal delay={120} variant="right" className="relative hidden lg:block">
             <Media media={media.needsMeeting} className="clip-diag-br aspect-[4/3] w-full shadow-card" />
-            <ScriptMark className="absolute -left-6 bottom-6" tone="light" />
           </Reveal>
         </div>
 

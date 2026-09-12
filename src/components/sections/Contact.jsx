@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import Icon from '../ui/Icon';
 import Media from '../ui/Media';
 import Reveal from '../ui/Reveal';
-import ScriptMark from '../ui/ScriptMark';
 import SectionHeader from '../ui/SectionHeader';
 import media from '../../data/media';
 import { contact } from '../../data/site';
@@ -114,7 +113,6 @@ export default function Contact({ selectedOffer }) {
                 />
               }
             />
-            <ScriptMark className="absolute right-4 top-5" tone="light" />
 
             <ul className="absolute bottom-6 right-6 space-y-1 text-right">
               {contact.verbs.map((verb) => (

@@ -1,7 +1,6 @@
 import Icon from '../ui/Icon';
 import Media from '../ui/Media';
 import Reveal from '../ui/Reveal';
-import ScriptMark from '../ui/ScriptMark';
 import SectionHeader from '../ui/SectionHeader';
 import media from '../../data/media';
 import { why } from '../../data/site';
@@ -31,7 +30,6 @@ export default function WhyUs() {
 
           <Reveal delay={120} variant="right" className="relative hidden lg:block">
             <Media media={media.whyHandshake} className="clip-diag-tl aspect-[4/3] w-full shadow-card-hover" />
-            <ScriptMark className="absolute right-4 top-5" tone="light" />
           </Reveal>
         </div>
 

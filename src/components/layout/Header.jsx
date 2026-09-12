@@ -69,7 +69,7 @@ export default function Header() {
         </a>
 
         {/* Menu principal — desktop */}
-        <nav aria-label="Navigation principale" className="hidden lg:block">
+        <nav aria-label="Navigation principale" className="hidden shrink-0 lg:block">
           <ul className="flex items-center gap-7">
             {navLinks.map((link) => {
               const isActive = activeId === link.id;
@@ -78,7 +78,7 @@ export default function Header() {
                   <a
                     href={`#${link.id}`}
                     aria-current={isActive ? 'page' : undefined}
-                    className={`relative font-display text-[0.78rem] font-extrabold uppercase tracking-[0.14em] transition-colors ${
+                    className={`relative whitespace-nowrap font-display text-[0.78rem] font-extrabold uppercase tracking-[0.14em] transition-colors ${
                       isActive ? 'text-orange-500' : 'text-white/80 hover:text-white'
                     }`}
                   >

@@ -3,7 +3,6 @@ import Button from '../ui/Button';
 import Icon from '../ui/Icon';
 import Media from '../ui/Media';
 import Reveal from '../ui/Reveal';
-import ScriptMark from '../ui/ScriptMark';
 import SectionHeader from '../ui/SectionHeader';
 import media from '../../data/media';
 import { offersSection } from '../../data/site';
@@ -44,7 +43,6 @@ export default function Offers({ onSelectOffer }) {
           <Reveal delay={120} variant="right" className="relative hidden lg:block">
             <div className="absolute -right-4 -top-4 h-24 w-24 bg-orange-500/90" aria-hidden="true" />
             <Media media={media.offersDesk} className="clip-diag-tl relative aspect-[4/3] w-full shadow-card" />
-            <ScriptMark className="absolute bottom-6 left-6" tone="light" text="Des projets qui inspirent" />
           </Reveal>
         </div>
 

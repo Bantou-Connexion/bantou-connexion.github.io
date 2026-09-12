@@ -39,11 +39,12 @@ export const media = {
 
   /* ------------------------------------------------------ 01 QUI SOMMES-NOUS */
   aboutPortrait: {
-    src: photo('photo-1531123897727-8f129e1688ce', { w: 900, h: 1000 }),
-    alt: 'Femme afro-descendante au port assuré, chemise à col imprimé, main sous le menton',
+    // Visuel définitif (issu de visuel_basket_dunk_artistique_HD.pdf), recadré 900×1000, WebP q72.
+    src: '/images/about-portrait.webp',
+    alt: 'Illustration artistique d’un basketteur en plein dunk devant une foule, avec le message « Legend inspires generations »',
     brief:
-      "Portrait de profil d'un homme noir en bonnet noir et lunettes de soleil dorées, posture confiante, " +
-      'double exposition avec une skyline au coucher du soleil, découpe diagonale, fond crème.',
+      'Illustration low-poly colorée d’un basketteur en maillot rouge n°23 suspendu en plein dunk, panier en haut à droite, ' +
+      'foule noir et blanc en contrebas, mention « 23 — Legend inspires generations ».',
   },
   aboutBridge: {
     src: photo('photo-1519501025264-65ba15a82390', { w: 1600, h: 520 }),
@@ -55,11 +56,12 @@ export const media = {
 
   /* ------------------------------------------------------------ 02 FONDATEUR */
   founderPortrait: {
-    src: photo('photo-1580852300654-03c803a14e24', { w: 900, h: 1100 }),
-    alt: 'Portrait d’un homme afro-descendant à lunettes devant des tours modernes',
+    // Visuel définitif (issu de portrait_bureau_fond_floute_HD_vertical.pdf), recadré 900×1100, WebP q72.
+    src: '/images/founder-portrait.webp',
+    alt: 'Portrait du fondateur en costume noir et chemise blanche, assis à son bureau devant une skyline floutée',
     brief:
-      '⚠️ À remplacer impérativement par une photo réelle de Karym Mbakam « Djomo ». Cadrage attendu : portrait studio, ' +
-      'costume noir et col roulé, main sous le menton, sourire assuré, éclairage clair-obscur chaud sur fond brun très sombre.',
+      'Portrait assis d’un homme noir en costume noir et chemise blanche ouverte, bras croisés sur le bureau, ' +
+      'regard direct et sourire assuré, lumière chaude, skyline floutée derrière une baie vitrée.',
   },
   founderCity: {
     src: photo('photo-1580060839134-75a5edca2e99', { w: 1800, h: 600 }),

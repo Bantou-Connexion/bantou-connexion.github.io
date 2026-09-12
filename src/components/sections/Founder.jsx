@@ -28,7 +28,6 @@ export default function Founder() {
       <div className="shell mt-12 grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
         <Reveal variant="left" className="relative">
           <Media media={media.founderPortrait} className="clip-diag-br aspect-[4/5] w-full max-w-sm shadow-card-hover" />
-          <div className="absolute -bottom-4 -right-2 hidden h-24 w-24 bg-orange-500/90 sm:block lg:right-6" aria-hidden="true" />
         </Reveal>
 
         <div>

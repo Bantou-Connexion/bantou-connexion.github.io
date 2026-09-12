@@ -1,7 +1,6 @@
 import Icon from '../ui/Icon';
 import Media from '../ui/Media';
 import Reveal from '../ui/Reveal';
-import ScriptMark from '../ui/ScriptMark';
 import SectionHeader from '../ui/SectionHeader';
 import { DiamondBand } from '../ui/GeoAccent';
 import media from '../../data/media';
@@ -33,7 +32,6 @@ export default function About() {
           <Reveal delay={120} variant="right" className="relative hidden lg:block">
             <div className="absolute -left-6 top-10 h-32 w-32 bg-orange-500/90" aria-hidden="true" />
             <Media media={media.aboutPortrait} className="clip-diag-br relative aspect-[4/5] w-full shadow-card" />
-            <ScriptMark className="absolute -left-4 bottom-10" tone="dark" />
           </Reveal>
         </div>
 
