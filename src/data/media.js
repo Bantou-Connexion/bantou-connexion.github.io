@@ -72,11 +72,12 @@ export const media = {
 
   /* -------------------------------------------------------------- 03 BESOIN */
   needsMeeting: {
-    src: photo('photo-1531482615713-2afd69097998', { w: 1200, h: 800 }),
-    alt: 'Femme afro-descendante au travail sur son ordinateur portable, entourée de son équipe',
+    // Visuel définitif (issu de brainstorming_entrepreneurs_visuel_2_HD.pdf), recadré 1200×800, WebP q72.
+    src: '/images/needs-meeting.webp',
+    alt: 'Trois entrepreneurs en pleine discussion autour d’une table, carnets et ordinateurs portables, skyline en arrière-plan',
     brief:
-      'Un homme noir et une femme en tenue professionnelle, penchés sur un ordinateur portable dans un bureau lumineux, ' +
-      "expression concentrée, mug noir siglé au premier plan, baie vitrée avec ville à l'arrière-plan.",
+      'Séance de brainstorming entre trois entrepreneurs — une femme en blazer crème au centre expliquant, deux hommes ' +
+      'attentifs de part et d’autre — carnets, ordinateurs et cafés sur une table en marbre, baie vitrée sur la ville au coucher du soleil.',
   },
 
   /* -------------------------------------------------------------- 04 OFFRES */
