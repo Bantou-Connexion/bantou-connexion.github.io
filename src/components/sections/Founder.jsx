@@ -74,7 +74,7 @@ export default function Founder() {
       <Media
         media={media.founderCity}
         className="mt-14 min-h-[220px]"
-        imgClassName="absolute inset-0 h-full w-full object-cover"
+        imgClassName="absolute inset-0"
         overlay={
           <div
             className="absolute inset-0 bg-[linear-gradient(180deg,#0A1628_0%,rgba(10,22,40,0.72)_55%,rgba(10,22,40,0.9)_100%)]"

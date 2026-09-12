@@ -42,7 +42,7 @@ export default function About() {
           <Media
             media={media.aboutBridge}
             className="clip-band relative"
-            imgClassName="absolute inset-0 h-full w-full object-cover"
+            imgClassName="absolute inset-0"
             overlay={
               <div
                 className="absolute inset-0 bg-[linear-gradient(90deg,#0A1628_0%,rgba(10,22,40,0.9)_55%,rgba(10,22,40,0.6)_100%)]"

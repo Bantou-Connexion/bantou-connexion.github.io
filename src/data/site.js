@@ -44,7 +44,6 @@ export const hero = {
     { icon: 'play', label: 'Création & contenus' },
     { icon: 'users', label: 'Formation & accompagnement' },
   ],
-  badge: { value: '25 000 €', label: 'objectif de financement 2026' },
 };
 
 /* ------------------------------------------------------- 01 QUI SOMMES-NOUS */

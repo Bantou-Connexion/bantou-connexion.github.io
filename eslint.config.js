@@ -25,6 +25,9 @@ export default [
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'react/no-unescaped-entities': 'off',
+      // React 18 ne connaît pas `fetchPriority` en camelCase : l'attribut doit
+      // être passé en minuscules pour atteindre le DOM (cf. Media.jsx).
+      'react/no-unknown-property': ['error', { ignore: ['fetchpriority'] }],
     },
   },
 ];

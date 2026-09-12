@@ -2,7 +2,6 @@ import Button from '../ui/Button';
 import Icon from '../ui/Icon';
 import Media from '../ui/Media';
 import Reveal from '../ui/Reveal';
-import ScriptMark from '../ui/ScriptMark';
 import { Chevron, DiamondBand } from '../ui/GeoAccent';
 import media from '../../data/media';
 import { hero } from '../../data/site';
@@ -21,7 +20,6 @@ export default function Hero() {
         media={media.heroSkyline}
         position="absolute"
         className="pointer-events-none inset-x-0 bottom-0 h-56 opacity-30 sm:h-72"
-        imgClassName="h-full w-full object-cover"
         overlay={
           <div
             className="absolute inset-0 bg-[linear-gradient(180deg,#0A1628_0%,rgba(10,22,40,0.7)_45%,rgba(10,22,40,0.95)_100%)]"
@@ -83,6 +81,7 @@ export default function Hero() {
           <Media
             media={media.heroPortrait}
             priority
+            fit="none"
             className="clip-diag-tl relative aspect-[4/5] w-full max-w-md shadow-card-hover sm:ml-auto"
             overlay={
               <div
@@ -91,14 +90,6 @@ export default function Hero() {
               />
             }
           />
-
-          <ScriptMark className="mt-6 sm:absolute sm:-left-2 sm:bottom-8 sm:mt-0" tone="light" />
-
-          {/* Encart chiffré (objectif de financement) */}
-          <div className="mt-6 inline-flex flex-col border-l-4 border-orange-500 bg-navy-800/90 px-5 py-4 backdrop-blur-sm sm:absolute sm:-bottom-9 sm:right-0 sm:mt-0">
-            <span className="font-display text-2xl font-black text-white">{hero.badge.value}</span>
-            <span className="mt-1 text-[0.72rem] uppercase tracking-[0.14em] text-white/60">{hero.badge.label}</span>
-          </div>
         </Reveal>
       </div>
     </section>

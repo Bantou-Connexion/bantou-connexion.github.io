@@ -24,11 +24,10 @@ const photo = (id, { w = 1200, h, fit = 'crop' } = {}) =>
 export const media = {
   /* ---------------------------------------------------------------- HERO */
   heroPortrait: {
-    src: photo('photo-1589156280159-27698a70f29e', { w: 900, h: 1100 }),
-    alt: "Femme afro-descendante au regard tourné vers l'horizon, devant une skyline au coucher du soleil",
-    brief:
-      "Portrait 3/4 d'une femme noire élégante en foulard wax orange et noir, regard levé vers l'horizon, " +
-      'lumière chaude de golden hour sur le visage, skyline africaine floue en arrière-plan, ambiance premium et inspirante.',
+    // Visuel définitif (issu de visuel_territoires_inspirent_A4_vertical_HD.pdf), recadré 900×1100, WebP q72.
+    src: '/images/hero-portrait.webp',
+    alt: '',
+    brief: '',
   },
   heroSkyline: {
     src: photo('photo-1611348524140-53c9a25263d6', { w: 1800, h: 700 }),

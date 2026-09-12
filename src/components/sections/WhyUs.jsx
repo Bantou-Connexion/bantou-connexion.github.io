@@ -76,7 +76,7 @@ export default function WhyUs() {
             <Media
               media={media.whyTestimonial}
               className="order-1 h-56 w-full sm:order-2 sm:h-full sm:w-56"
-              imgClassName="h-full w-full object-cover grayscale contrast-[1.08]"
+              imgClassName="grayscale contrast-[1.08]"
               overlay={<div className="absolute inset-0 bg-navy-900/25" aria-hidden="true" />}
             />
           </div>

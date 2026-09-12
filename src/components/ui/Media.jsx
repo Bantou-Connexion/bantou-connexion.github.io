@@ -11,12 +11,23 @@ import { useState } from 'react';
  * `position` est un prop et non une classe utilitaire : Tailwind émet `.relative`
  * après `.absolute`, donc une classe `absolute` passée par l'appelant serait
  * silencieusement écrasée par le `relative` du conteneur.
+ *
+ * `fit` pilote le recadrage de l'image (`object-fit`) ; `imgClassName` ne sert
+ * qu'aux classes additionnelles (positionnement, filtres…), la base
+ * `h-full w-full` étant toujours appliquée.
  */
+const FIT_CLASSES = {
+  cover: 'object-cover',
+  contain: 'object-contain',
+  none: '',
+};
+
 export default function Media({
   media,
   position = 'relative',
   className = '',
-  imgClassName = 'h-full w-full object-cover',
+  imgClassName = '',
+  fit = 'cover',
   priority = false,
   overlay = null,
   children = null,
@@ -36,9 +47,9 @@ export default function Media({
           alt={media.alt}
           loading={priority ? 'eager' : 'lazy'}
           decoding={priority ? 'sync' : 'async'}
-          fetchPriority={priority ? 'high' : 'auto'}
+          fetchpriority={priority ? 'high' : 'auto'}
           onError={() => setFailed(true)}
-          className={imgClassName}
+          className={`h-full w-full ${FIT_CLASSES[fit]} ${imgClassName}`.trim()}
         />
       )}
 

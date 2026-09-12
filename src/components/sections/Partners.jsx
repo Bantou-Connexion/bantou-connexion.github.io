@@ -37,7 +37,7 @@ export default function Partners() {
           <Media
             media={media.partnersTestimonial}
             className="h-56 w-full lg:h-full"
-            imgClassName="h-full w-full object-cover grayscale contrast-[1.08]"
+            imgClassName="grayscale contrast-[1.08]"
             overlay={<div className="absolute inset-0 bg-navy-900/25" aria-hidden="true" />}
           />
 

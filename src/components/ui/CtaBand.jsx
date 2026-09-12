@@ -16,7 +16,7 @@ export default function CtaBand({ lead, highlight, text, label, href, onClick })
       <Media
         media={media.ctaBand}
         className="min-h-[280px] sm:min-h-[320px]"
-        imgClassName="absolute inset-0 h-full w-full object-cover"
+        imgClassName="absolute inset-0"
         overlay={
           <div
             className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,15,28,0.94)_0%,rgba(10,22,40,0.82)_45%,rgba(10,22,40,0.55)_100%)]"
