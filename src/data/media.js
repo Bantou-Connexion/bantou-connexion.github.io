@@ -162,10 +162,13 @@ export const media = {
       'palmiers et skyline moderne en bord de mer en arrière-plan.',
   },
   partnersTestimonial: {
-    src: photo('photo-1463453091185-61582044d556', { w: 700, h: 800 }),
-    alt: 'Portrait d’un homme afro-descendant devant une fresque urbaine colorée',
+    // Visuel définitif (issu de 7-2-portrait_entrepreneur_vertical.pdf), redimensionné 700×933, WebP q72.
+    src: '/images/partners-testimonial.webp',
+    alt: 'Portrait d’un entrepreneur noir en costume sombre et chemise blanche, main sous le menton, assis à son bureau devant un ordinateur portable',
     brief:
-      "Portrait noir et blanc d'un homme noir à lunettes, chemise blanche et veste sombre, main sous le menton, sourire discret.",
+      'Portrait d’un homme noir en costume noir et chemise blanche, montre au poignet, main pensive sous le menton, regard caméra, ' +
+      'assis dans un fauteuil de bureau en cuir — ordinateur portable, carnet, stylo et mug au premier plan, globe, plantes et lampe ' +
+      'en arrière-plan, lumière chaude de fin de journée ; passé en noir et blanc par le composant.',
   },
 
   /* ----------------------------------------------------------- 08 PROCESSUS */
