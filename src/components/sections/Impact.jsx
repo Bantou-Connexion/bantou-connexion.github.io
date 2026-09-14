@@ -25,7 +25,7 @@ export default function Impact() {
           />
 
           <Reveal delay={120} variant="right" className="relative hidden lg:block">
-            <Media media={media.impactPortrait} className="clip-diag-tl aspect-[5/4] w-full shadow-card" />
+            <Media media={media.impactPortrait} className="clip-diag-tl aspect-[2/1] w-full shadow-card" />
           </Reveal>
         </div>
 

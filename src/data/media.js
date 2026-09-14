@@ -93,27 +93,33 @@ export const media = {
 
   /* ------------------------------------------------------------- 05 POURQUOI */
   whyHandshake: {
-    src: photo('photo-1521791136064-7986c2920216', { w: 1200, h: 760 }),
-    alt: 'Poignée de main entre deux partenaires au-dessus d’un contrat',
+    // Visuel définitif (issu de poignee_de_main_Bantou_Connexion_HD_horizontal-5-1.pdf), recadré 1200×900, WebP q72.
+    src: '/images/why-handshake.webp',
+    alt: 'Poignée de main entre deux partenaires en costume devant une skyline, moitié orange au soleil couchant, moitié bleu marine',
     brief:
-      'Gros plan sur une poignée de main entre un homme noir et un partenaire, manches de costume, ' +
-      'contrat et stylo posés sur la table, lumière chaude de fin de journée, plante verte en arrière-plan.',
+      'Gros plan sur une poignée de main entre un homme noir en costume sombre à chemise crème et un partenaire en blazer bleu marine, ' +
+      'skyline urbaine en arrière-plan scindée en deux tonalités — coucher de soleil orangé à gauche, bleu nuit à droite — ' +
+      'encadrée de bandes diagonales orange et bleu marine aux couleurs de la marque.',
   },
   whyTestimonial: {
-    src: photo('photo-1573497491765-dccce02b29df', { w: 700, h: 800 }),
-    alt: 'Portrait souriant d’une femme afro-descendante en tenue à motifs',
+    // Visuel définitif (issu de 5-2-portrait_femme_vertical_HD.pdf), redimensionné 700×1050, WebP q72.
+    src: '/images/why-testimonial.webp',
+    alt: 'Portrait noir et blanc d’une femme souriante en blazer sombre, regard tourné vers le haut',
     brief:
-      "Portrait noir et blanc d'une femme souriante en veste sombre, regard direct, éclairage doux — traitement monochrome " +
+      'Portrait noir et blanc d’une femme aux cheveux longs et ondulés, blazer sombre, boucles d’oreilles pendantes, ' +
+      'large sourire et regard levé vers la droite, arrière-plan architectural flouté — traitement monochrome ' +
       'contrasté pour intégration sur fond bleu marine.',
   },
 
   /* -------------------------------------------------------------- 06 IMPACT */
   impactPortrait: {
-    src: photo('photo-1531123414780-f74242c2b052', { w: 1000, h: 800 }),
-    alt: 'Femme afro-descendante souriante en tenue aux motifs africains',
+    // Visuel définitif (issu de 6-visuel_urban_bobo_studio.pdf), recadré 1200×600 (2:1), WebP q72.
+    src: '/images/impact-portrait.webp',
+    alt: 'Quatre jeunes adultes posant assis dans un studio à l’ambiance chaleureuse : fauteuil en cuir, piano, projecteurs et lampe',
     brief:
-      "Homme noir de dos-trois-quarts, casquette noire et sweat à capuche, contemplant une skyline moderne au soleil couchant, " +
-      'lumière dorée rasante, logo discret brodé dans le dos.',
+      'Portrait de groupe éditorial en lumière chaude et tamisée : quatre personnes assises, regard caméra — homme en bonnet ' +
+      'et chemise noire dans un fauteuil Chesterfield, femme aux cheveux bouclés en tailleur crème, femme en combinaison bordeaux ' +
+      'assise au sol, homme en casquette et veste noires sur un tabouret — décor de studio avec piano, projecteurs, rideaux et lampe.',
   },
   impactCards: [
     {
