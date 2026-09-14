@@ -206,11 +206,13 @@ export const media = {
 
   /* ------------------------------------------------------------- 09 CONTACT */
   contactPortrait: {
-    src: photo('photo-1546525848-3ce03ca516f6', { w: 1000, h: 820 }),
-    alt: 'Jeune homme afro-descendant au regard direct, dans un parc urbain',
+    // Visuel définitif (issu de 9 - portrait_bureau_fond_floute_HD_vertical.pdf — même source que founderPortrait),
+    // recadré en bande 5:4 sur le buste, 1000×800, WebP q72.
+    src: '/images/contact-portrait.webp',
+    alt: 'Portrait du fondateur en costume noir et chemise blanche, regard direct, devant une skyline floutée',
     brief:
-      "Homme noir élégant, casquette et lunettes de soleil, stylo à la main et montre visible, posture réflexive, " +
-      'skyline au coucher du soleil derrière lui, découpe diagonale sur fond crème.',
+      'Cadrage buste d’un homme noir en costume noir et chemise blanche ouverte, regard direct et sourire assuré, ' +
+      'lumière chaude, globe doré et plante sur une étagère, skyline floutée derrière une baie vitrée.',
   },
 
   /* --------------------------------------------- BANDEAUX D'APPEL À L'ACTION */
