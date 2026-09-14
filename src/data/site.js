@@ -319,9 +319,9 @@ export const impact = {
   intro:
     "Notre ambition est de créer des ponts entre la culture urbaine, l'innovation et le développement pour bâtir des avenirs meilleurs et connectés.",
   timeline: [
-    { year: '2025', title: 'Consolider', text: "Structurer l'entreprise, développer nos offres et asseoir notre présence en France." },
-    { year: '2026', title: 'Étendre', text: "Déployer nos programmes de formation et nos solutions culturelles à l'international." },
-    { year: '2028', title: 'Connecter', text: "Créer un réseau panafricain de partenaires, d'ambassadeurs et de projets à impact." },
+    { year: '2027', title: 'Consolider', text: "Structurer l'entreprise, développer nos offres et asseoir notre présence en France." },
+    { year: '2028', title: 'Étendre', text: "Déployer nos programmes de formation et nos solutions culturelles à l'international." },
+    { year: '2029', title: 'Connecter', text: "Créer un réseau panafricain de partenaires, d'ambassadeurs et de projets à impact." },
     { year: '2030', title: 'Transformer', text: "Devenir un acteur de référence dans la culture urbaine et l'innovation à impact." },
   ],
   engagements: [
