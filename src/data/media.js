@@ -179,9 +179,13 @@ export const media = {
       brief: 'Homme noir à lunettes en costume, en pleine explication lors d’un entretien, bureau lumineux.',
     },
     {
-      src: photo('photo-1517048676732-d65bc937f952', { w: 600, h: 460 }),
-      alt: 'Prise de notes et analyse de documents lors d’une session stratégique',
-      brief: 'Mains tenant un stylo au-dessus de tableaux de bord imprimés, réunion de travail vue du dessus.',
+      // Visuel définitif (issu de 8-conception strategique BC_reunion_entrepreneurs_HD.pdf), recadré 800×450, WebP q72.
+      src: '/images/process-strategy.webp',
+      alt: 'Session de conception stratégique : trois entrepreneurs concentrés sur leurs ordinateurs portables autour d’une table',
+      brief:
+        'Réunion de travail dans un espace de coworking chaleureux en lumière dorée : homme à lunettes en pull beige réfléchissant ' +
+        'main au menton, femme blonde en chemise bleue stylo en main, homme noir de dos avec casque autour du cou — ' +
+        'ordinateurs portables affichant graphiques et documents, plante et bouteille d’eau sur la table en bois.',
     },
     {
       src: photo('photo-1573164713988-8665fc963095', { w: 600, h: 460 }),
