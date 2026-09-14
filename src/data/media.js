@@ -141,9 +141,13 @@ export const media = {
       brief: 'Vue aérienne d’une ville verte au coucher du soleil : tours modernes, parc arboré, avenue rectiligne.',
     },
     {
-      src: photo('photo-1543269865-cbf427effbad', { w: 700, h: 500 }),
-      alt: 'Équipe souriante réunie autour d’une table de travail',
-      brief: 'Deux collègues souriants, un homme noir et une femme, en pleine discussion dans un espace de coworking clair.',
+      // Visuel définitif (issu de 6-3-transformer-equipe_diverse_Bantou_Connexion_HD_horizontal.pdf), redimensionné 800×370, WebP q72.
+      src: '/images/impact-team.webp',
+      alt: 'Équipe diverse et souriante réunie autour d’une table, ordinateur portable et smartphone en main',
+      brief:
+        'Quatre jeunes collègues souriants autour d’une table dans un café-coworking lumineux — homme noir en pull gris consultant ' +
+        'un smartphone, femme brune en chemise en jean, femme asiatique à lunettes, femme de dos — ordinateur portable, tasse et gobelets, ' +
+        'mur de briques blanches et porte en bois.',
     },
   ],
 
