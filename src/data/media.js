@@ -128,9 +128,12 @@ export const media = {
       brief: 'Homme noir en costume animant un atelier devant un paperboard, gestuelle expressive, salle claire.',
     },
     {
-      src: photo('photo-1600880292089-90a7e086ee0c', { w: 700, h: 500 }),
-      alt: 'Mains jointes scellant un partenariat',
-      brief: 'Poignée de main serrée entre deux personnes en costume, lumière chaude, arrière-plan de bureau flouté.',
+      // Visuel définitif (issu de 6-2-Bantou_Connexion_mains_bague_mariage_HD.pdf), redimensionné 800×450, WebP q72.
+      src: '/images/impact-hands.webp',
+      alt: 'Trois mains superposées scellant un partenariat au-dessus d’un bureau, logo Bantou Connexion en bas à droite',
+      brief:
+        'Gros plan en plongée sur trois mains empilées en signe d’engagement — manches de costume marine, gris et blazer crème — ' +
+        'au-dessus d’un bureau flouté avec ordinateur portable, stylo et graphiques, lumière chaude, logo BC Bantou Connexion en bas à droite.',
     },
     {
       src: photo('photo-1480714378408-67cf0d13bc1b', { w: 700, h: 500 }),
