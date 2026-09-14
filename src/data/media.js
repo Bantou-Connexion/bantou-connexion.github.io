@@ -82,11 +82,13 @@ export const media = {
 
   /* -------------------------------------------------------------- 04 OFFRES */
   offersDesk: {
-    src: photo('photo-1587614382346-4ec70e388b28', { w: 1200, h: 800 }),
-    alt: 'Bureau de travail : carnet, stylo, ordinateur portable et tasse',
+    // Visuel définitif (issu de Bantou_Connexion_Visuel_HD-4.pdf), redimensionné 1200×900, WebP q72.
+    src: '/images/offers-desk.webp',
+    alt: 'Ordinateur portable sur un bureau en marbre affichant la campagne Bantou Connexion « Révèle ton idée. Construis ta réalité. », entouré d’un carnet, d’un café et de lunettes',
     brief:
-      'Nature morte de bureau en lumière chaude : carnet ouvert avec notes manuscrites, stylo plume, ordinateur portable, ' +
-      'mug noir siglé « BANTOU CONNEXION », plante verte, vue urbaine floue derrière la vitre.',
+      'Nature morte de bureau en lumière chaude : ordinateur portable ouvert sur le visuel « Révèle ton idée. Construis ta réalité. » ' +
+      '(logo BC, duo d’entrepreneurs devant une skyline, piliers Forme-toi / Connecte-toi / Construis), table ronde en marbre, ' +
+      'tasse de café, bougie, carnet et crayon, lunettes posées sur un livre.',
   },
 
   /* ------------------------------------------------------------- 05 POURQUOI */
