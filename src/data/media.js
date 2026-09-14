@@ -153,11 +153,13 @@ export const media = {
 
   /* ---------------------------------------------------------- 07 PARTENAIRES */
   partnersCompass: {
-    src: photo('photo-1486406146926-c627a92ad1ab', { w: 1200, h: 760 }),
-    alt: '',
+    // Visuel définitif (issu de 7-1-rencontre_entrepreneurs_diaspora_afrique_BC_HD.pdf), recadré 1200×900, WebP q72.
+    src: '/images/partners-meeting.webp',
+    alt: 'Rencontre d’entrepreneurs de la diaspora et d’Afrique autour d’une table en terrasse, ordinateurs et carte de l’Afrique, skyline en bord de mer',
     brief:
-      'Boussole en laiton posée sur une surface bois, skyline moderne au coucher du soleil en arrière-plan, ' +
-      'lettrage gravé « CONFIANCE · COLLABORATION · RÉSULTATS · IMPACT ».',
+      'Réunion animée de six entrepreneurs de la diaspora et du continent en terrasse ensoleillée — tenues mêlant costumes, ' +
+      'boubou brodé, turban et chapeau traditionnel — ordinateurs portables, carnets, cafés et carte de l’Afrique sur la table, ' +
+      'palmiers et skyline moderne en bord de mer en arrière-plan.',
   },
   partnersTestimonial: {
     src: photo('photo-1463453091185-61582044d556', { w: 700, h: 800 }),
