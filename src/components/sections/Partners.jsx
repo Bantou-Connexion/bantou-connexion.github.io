@@ -9,9 +9,7 @@ import { partners } from '../../data/site';
 /*
  * 07 — PARTENAIRES & ÉCOSYSTÈME (planche 8 du PDF).
  *
- * Bandeau de logos partenaires (rendus en pastilles typographiques, à
- * remplacer par les logotypes officiels), témoignage sur fond sombre et
- * appel à devenir partenaire.
+ * Témoignage sur fond sombre et appel à devenir partenaire.
  */
 export default function Partners() {
   return (
@@ -40,12 +38,7 @@ export default function Partners() {
           />
 
           <div className="p-7 sm:p-10">
-            <div className="flex items-center gap-3">
-              <span className="block h-[3px] w-8 bg-orange-500" aria-hidden="true" />
-              <p className="font-display text-eyebrow font-extrabold uppercase text-white/55">{partners.eyebrowTrust}</p>
-            </div>
-
-            <blockquote className="mt-6">
+            <blockquote>
               <p className="text-lg leading-snug text-white sm:text-xl">
                 « {partners.testimonial.quoteLead}
                 <span className="text-orange-500">{partners.testimonial.quoteHighlight}</span> »
@@ -62,31 +55,6 @@ export default function Partners() {
               <li key={value.label} className="flex items-center gap-4 px-7 py-5">
                 <Icon name={value.icon} className="h-7 w-7 shrink-0 text-orange-500" strokeWidth={1.5} />
                 <span className="text-sm text-white/85">{value.label}</span>
-              </li>
-            ))}
-          </ul>
-        </Reveal>
-
-        {/* ---------------------------------------------------- Bandeau logos */}
-        <Reveal delay={80} className="mt-6 flex flex-col gap-6 bg-white p-7 shadow-card lg:flex-row lg:items-center lg:gap-10">
-          <div className="shrink-0">
-            <p className="font-display text-eyebrow font-extrabold uppercase leading-relaxed text-navy-900/60">
-              Ils nous font
-              <br />
-              confiance
-            </p>
-            <span className="mt-2 block h-[3px] w-8 bg-orange-500" aria-hidden="true" />
-          </div>
-
-          <ul className="flex flex-1 flex-wrap items-center gap-x-8 gap-y-4 lg:divide-x lg:divide-cream-deep">
-            {partners.logos.map((logo, index) => (
-              <li
-                key={logo}
-                className={`font-display text-sm font-extrabold uppercase tracking-wide text-navy-900/70 transition-colors hover:text-orange-500 ${
-                  index > 0 ? 'lg:pl-8' : ''
-                }`}
-              >
-                {logo}
               </li>
             ))}
           </ul>

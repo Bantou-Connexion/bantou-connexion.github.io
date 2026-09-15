@@ -148,20 +148,6 @@ export default function Offers({ onSelectOffer }) {
             );
           })}
         </ul>
-
-        {/* ------------------------------------------------- Moteurs de valeur */}
-        <div className="mt-14 grid gap-px overflow-hidden border border-cream-deep bg-cream-deep sm:grid-cols-2 lg:grid-cols-4">
-          {offersSection.engines.map((engine, index) => (
-            <Reveal key={engine.num} delay={(index % 4) * 80} className="bg-white p-6">
-              <Icon name={engine.icon} className="h-9 w-9 text-orange-500" strokeWidth={1.5} />
-              <h3 className="mt-5 flex items-baseline gap-2 text-base">
-                <span className="font-display text-xs font-extrabold text-orange-500">{engine.num}</span>
-                {engine.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-muted">{engine.text}</p>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </section>
   );

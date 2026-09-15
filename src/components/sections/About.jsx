@@ -48,20 +48,12 @@ export default function About() {
               />
             }
           >
-            <div className="relative flex flex-col gap-6 border-l-4 border-orange-500 px-6 py-9 sm:px-10 md:flex-row md:items-center md:justify-between">
+            <div className="relative border-l-4 border-orange-500 px-6 py-9 sm:px-10">
               <p className="max-w-2xl text-xl font-semibold leading-snug text-white sm:text-2xl">
                 {about.quoteLead}
                 <span className="text-orange-500">{about.quoteHighlight}</span>
                 {about.quoteTail}
               </p>
-
-              <ul className="shrink-0 space-y-1.5 md:text-right">
-                {about.quotePillars.map((pillar) => (
-                  <li key={pillar} className="font-display text-[0.68rem] font-extrabold uppercase tracking-[0.22em] text-white/70">
-                    {pillar}
-                  </li>
-                ))}
-              </ul>
             </div>
           </Media>
         </Reveal>

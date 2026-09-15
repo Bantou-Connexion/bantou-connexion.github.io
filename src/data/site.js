@@ -10,7 +10,6 @@
 
 export const brand = {
   name: 'Bantou Connexion',
-  baseline: 'CONCEVOIR · CONNECTER · CONSTRUIRE',
   tagline: "Des idées d'aujourd'hui pour des villes de demain",
   script: 'Des Territoires qui inspirent',
   footerKeywords: ['CULTURE', 'INNOVATION', 'TERRITOIRES DURABLES'],
@@ -54,7 +53,7 @@ export const about = {
   titleLead: "L'expertise au service des projets et de la",
   titleHighlight: 'culture urbaine',
   intro:
-    "Bantou Connexion est une micro-entreprise qui accompagne les créateurs, entrepreneurs, associations, institutions et marques dans la transformation de leurs idées en projets concrets, visibles et finançables — en combinant conseil stratégique, création de contenus, direction artistique, formation et ingénierie de projets, avec une forte empreinte culturelle et urbaine.",
+    "Bantou Connexion est une entreprise qui accompagne les créateurs, entrepreneurs, associations, institutions et marques dans la transformation de leurs idées en projets concrets, visibles et finançables — en combinant conseil stratégique, création de contenus, direction artistique, formation et ingénierie de projets, avec une forte empreinte culturelle et urbaine.",
   quoteLead: 'Notre ambition : bâtir des ',
   quoteHighlight: 'passerelles',
   quoteTail: ' entre ambition, compétence et culture pour créer un impact durable.',
@@ -105,8 +104,8 @@ export const founder = {
   stats: [
     { value: '+100', label: 'projets accompagnés' },
     { value: '+50', label: 'partenaires mobilisés' },
-    { value: '+20', label: 'formations & ateliers' },
-    { value: '+15', label: 'projets culturels' },
+    { value: '+45', label: 'formations & ateliers' },
+    { value: '+33', label: 'projets culturels' },
   ],
 };
 
@@ -256,12 +255,6 @@ export const offersSection = {
     },
   ],
   ctaLabel: 'Choisir cette offre',
-  engines: [
-    { num: '01', icon: 'handshake', title: 'Offres en ligne', text: 'Diagnostics, sessions stratégiques, packs et abonnements ressources.' },
-    { num: '02', icon: 'sliders', title: 'Prestations Premium', text: 'Accompagnement sur-mesure, direction artistique et ingénierie de projets.' },
-    { num: '03', icon: 'clock', title: 'Formations & Ateliers', text: 'Ateliers pratiques et programmes thématiques adaptés aux besoins.' },
-    { num: '04', icon: 'users', title: 'Commandes B2B & Institutionnelles', text: 'Missions pour associations, collectivités, entreprises et organismes.' },
-  ],
   cta: { lead: 'Échangeons sur ', highlight: 'vos besoins', text: 'Construisons ensemble des solutions à impact.', label: 'Réserver un échange', href: '#tunnel-vente' },
 };
 
@@ -340,17 +333,6 @@ export const partners = {
   eyebrow: 'Partenaires & écosystème',
   titleLead: 'Un réseau solide, en France, en Afrique et dans la ',
   titleHighlight: 'diaspora',
-  eyebrowTrust: 'Ils nous font confiance',
-  logos: [
-    'Institut Français',
-    'UNESCO',
-    'AFD',
-    'Radio Nova',
-    'Trace Urban',
-    'Rapelite',
-    'Campus France',
-    'Orange Digital Center',
-  ],
   values: [
     { icon: 'handshake', label: 'Écoute active' },
     { icon: 'target', label: 'Solutions sur mesure' },
@@ -380,7 +362,6 @@ export const process = {
   titleHighlight: 'trajectoire claire',
   intro:
     "Chez Bantou Connexion, nous suivons une méthode structurée pour transformer vos idées en projets concrets et durables. De l'écoute à la réalisation, nous avançons à vos côtés à chaque étape.",
-  verbs: ['ÉCOUTER', 'CONSEILLER', 'PLANIFIER', 'RÉALISER', 'MESURER'],
   steps: [
     { num: '01', icon: 'chat', title: 'Écoute & analyse', text: 'Comprendre votre projet, vos objectifs et votre contexte.' },
     { num: '02', icon: 'target', title: 'Conception stratégique', text: 'Structurer une feuille de route claire et adaptée.' },
@@ -409,7 +390,6 @@ export const contact = {
   titleLead: 'Prenons rendez-vous et ',
   titleHighlight: 'construisons ensemble',
   intro: "Un projet en tête ? Parlons-en et voyons comment le transformer en impact concret.",
-  verbs: ['ÉCOUTER', 'ÉCHANGER', 'CONSTRUIRE', 'AVANCER', 'ENSEMBLE'],
   details: [
     {
       icon: 'phone',
@@ -422,12 +402,6 @@ export const contact = {
       label: 'Email',
       value: 'contact@bantouconnexion.com',
       href: 'mailto:contact@bantouconnexion.com',
-    },
-    {
-      icon: 'pin',
-      label: 'Adresse',
-      value: '37 rue du Maréchal de Lattre de Tassigny,\n78150 Le Chesnay-Rocquencourt',
-      href: null,
     },
     {
       icon: 'globe',

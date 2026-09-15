@@ -35,9 +35,6 @@ export default function Footer() {
           <div className="lg:text-right">
             <h2 className="font-display text-eyebrow font-extrabold uppercase text-white/50">Baseline</h2>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70 lg:ml-auto">{brand.tagline}</p>
-            <p className="mt-4 font-display text-[0.7rem] font-extrabold uppercase tracking-[0.2em] text-orange-500">
-              {brand.baseline}
-            </p>
           </div>
         </div>
 

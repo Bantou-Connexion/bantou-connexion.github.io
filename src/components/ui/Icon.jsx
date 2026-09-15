@@ -108,19 +108,6 @@ const paths = {
       <path d="M4 20c3-6 7-9 12-11" />
     </>
   ),
-  sliders: (
-    <>
-      <path d="M4 7h9M17 7h3M4 17h4M12 17h8" />
-      <circle cx="15" cy="7" r="2" />
-      <circle cx="10" cy="17" r="2" />
-    </>
-  ),
-  clock: (
-    <>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M12 7v5.3l3.4 2" />
-    </>
-  ),
   chat: (
     <>
       <path d="M14.5 15.5H8l-4 3v-3H3.5A2.5 2.5 0 0 1 1 13V6.5A2.5 2.5 0 0 1 3.5 4h11A2.5 2.5 0 0 1 17 6.5V13a2.5 2.5 0 0 1-2.5 2.5z" />
@@ -146,12 +133,6 @@ const paths = {
     <>
       <rect x="2" y="4" width="20" height="16" rx="2" />
       <path d="m22 6-10 7L2 6" />
-    </>
-  ),
-  pin: (
-    <>
-      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z" />
-      <circle cx="12" cy="10" r="3" />
     </>
   ),
   facebook: <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />,

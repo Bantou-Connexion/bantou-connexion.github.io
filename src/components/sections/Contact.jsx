@@ -103,61 +103,32 @@ export default function Contact({ selectedOffer }) {
           />
 
           <Reveal delay={120} variant="right" className="relative hidden lg:block">
-            <Media
-              media={media.contactPortrait}
-              className="clip-diag-tl aspect-[5/4] w-full shadow-card"
-              overlay={
-                <div
-                  className="absolute inset-0 bg-[linear-gradient(215deg,rgba(10,22,40,0.1)_35%,rgba(10,22,40,0.85)_100%)]"
-                  aria-hidden="true"
-                />
-              }
-            />
-
-            <ul className="absolute bottom-6 right-6 space-y-1 text-right">
-              {contact.verbs.map((verb) => (
-                <li
-                  key={verb}
-                  className="font-display text-[0.66rem] font-extrabold uppercase tracking-[0.24em] text-white/80"
-                >
-                  {verb}
-                </li>
-              ))}
-            </ul>
+            <Media media={media.contactPortrait} className="clip-diag-tl aspect-[5/4] w-full shadow-card" />
           </Reveal>
         </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-stretch">
           {/* ------------------------------------------------- Coordonnées */}
           <Reveal variant="left" as="ul" className="grid auto-rows-fr gap-px overflow-hidden bg-navy-600">
-            {contact.details.map((detail) => {
-              const Wrapper = detail.href ? 'a' : 'div';
-              const wrapperProps = detail.href
-                ? {
-                    href: detail.href,
-                    ...(detail.href.startsWith('http') ? { target: '_blank', rel: 'noreferrer noopener' } : {}),
-                  }
-                : {};
-
-              return (
-                <li key={detail.label} className="flex bg-navy-900">
-                  <Wrapper
-                    {...wrapperProps}
-                    className={`flex w-full items-center gap-5 p-6 transition-colors ${detail.href ? 'hover:bg-navy-800' : ''}`}
-                  >
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-orange-500 text-white">
-                      <Icon name={detail.icon} className="h-5 w-5" strokeWidth={1.9} />
+            {contact.details.map((detail) => (
+              <li key={detail.label} className="flex bg-navy-900">
+                <a
+                  href={detail.href}
+                  {...(detail.href.startsWith('http') ? { target: '_blank', rel: 'noreferrer noopener' } : {})}
+                  className="flex w-full items-center gap-5 p-6 transition-colors hover:bg-navy-800"
+                >
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-orange-500 text-white">
+                    <Icon name={detail.icon} className="h-5 w-5" strokeWidth={1.9} />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-sm text-white/55">{detail.label}</span>
+                    <span className="mt-1 block break-words font-display text-[0.95rem] font-bold text-white">
+                      {detail.value}
                     </span>
-                    <span className="min-w-0">
-                      <span className="block text-sm text-white/55">{detail.label}</span>
-                      <span className="mt-1 block whitespace-pre-line break-words font-display text-[0.95rem] font-bold text-white">
-                        {detail.value}
-                      </span>
-                    </span>
-                  </Wrapper>
-                </li>
-              );
-            })}
+                  </span>
+                </a>
+              </li>
+            ))}
           </Reveal>
 
           {/* --------------------------------------------------- Formulaire */}

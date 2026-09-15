@@ -15,27 +15,13 @@ export default function Process() {
   return (
     <section id="processus" className="content-auto relative overflow-hidden bg-cream py-20 lg:py-28">
       <div className="shell relative">
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-          <SectionHeader
-            num={process.num}
-            eyebrow={process.eyebrow}
-            titleLead={process.titleLead}
-            titleHighlight={process.titleHighlight}
-            intro={process.intro}
-          />
-
-          {/* Verbes de la méthode, alignés à droite comme sur la planche */}
-          <Reveal delay={120} variant="right" as="ul" className="hidden lg:block lg:pt-4 lg:text-right">
-            {process.verbs.map((verb) => (
-              <li
-                key={verb}
-                className="font-display text-[0.72rem] font-extrabold uppercase leading-[2.2] tracking-[0.24em] text-navy-900/50"
-              >
-                {verb}
-              </li>
-            ))}
-          </Reveal>
-        </div>
+        <SectionHeader
+          num={process.num}
+          eyebrow={process.eyebrow}
+          titleLead={process.titleLead}
+          titleHighlight={process.titleHighlight}
+          intro={process.intro}
+        />
 
         {/* ------------------------------------------------------ Cinq étapes */}
         <ol className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
