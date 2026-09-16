@@ -184,9 +184,8 @@ export const offersSection = {
       id: 'diagnostic',
       tag: 'DIAGNOSTIC',
       title: 'Diagnostic projet',
-      text: 'Analyse rapide de votre idée et recommandations clés.',
-      price: '99 €',
-      priceUnit: '/ session',
+      text: 'Analyse rapide de votre idée et recommandations clés. (1h)',
+      prices: [{ amount: '99 €', unit: '/ session' }],
       categories: ['particuliers'],
     },
     {
@@ -194,8 +193,7 @@ export const offersSection = {
       tag: 'CONSEIL',
       title: 'Session stratégique',
       text: "Conseil individuel (1h30) pour passer à l'action.",
-      price: '190 €',
-      priceUnit: '/ session',
+      prices: [{ amount: '190 €', unit: '/ session' }],
       categories: ['particuliers'],
     },
     {
@@ -203,8 +201,7 @@ export const offersSection = {
       tag: 'STRUCTURATION',
       title: 'Pack Structuration',
       text: "Dossier complet : stratégie, plan d'action et projections.",
-      price: '490 €',
-      priceUnit: '',
+      prices: [{ amount: '490 €' }],
       categories: ['particuliers', 'entreprises'],
     },
     {
@@ -212,8 +209,7 @@ export const offersSection = {
       tag: 'LANCEMENT',
       title: 'Pack Lancement',
       text: 'Stratégie + contenus + identité + plan de communication.',
-      price: '990 €',
-      priceUnit: '',
+      prices: [{ amount: '990 €' }],
       categories: ['particuliers', 'entreprises'],
       featured: true,
     },
@@ -222,8 +218,7 @@ export const offersSection = {
       tag: 'PREMIUM',
       title: 'Accompagnement Premium',
       text: 'Suivi personnalisé et pilotage de projet sur 3 mois.',
-      price: '1 990 €',
-      priceUnit: '',
+      prices: [{ amount: '1 990 €' }],
       categories: ['entreprises', 'institutions'],
     },
     {
@@ -231,8 +226,10 @@ export const offersSection = {
       tag: 'FORMATION',
       title: 'Formation / Atelier',
       text: 'Journée ou demi-journée de formation sur mesure.',
-      price: '1 200 €',
-      priceUnit: '/ jour',
+      prices: [
+        { amount: '1 200 €', unit: '/ jour' },
+        { amount: '700 €', unit: '/ demi-journée' },
+      ],
       categories: ['entreprises', 'institutions'],
     },
     {
@@ -240,23 +237,17 @@ export const offersSection = {
       tag: 'INSTITUTIONNEL',
       title: 'Mission Institutionnelle',
       text: 'Étude, programme ou mission complète, sur devis.',
-      price: 'dès 2 500 €',
-      priceUnit: '/ sur devis',
+      prices: [{ amount: 'dès 2 500 €', unit: '/ sur devis' }],
       categories: ['institutions'],
-    },
-    {
-      id: 'abonnement',
-      tag: 'RESSOURCES',
-      title: 'Abonnement Ressources',
-      text: 'Accès illimité à nos ressources, modèles et masterclass.',
-      price: '29 €',
-      priceUnit: '/ mois',
-      categories: ['particuliers'],
     },
   ],
   ctaLabel: 'Choisir cette offre',
   cta: { lead: 'Échangeons sur ', highlight: 'vos besoins', text: 'Construisons ensemble des solutions à impact.', label: 'Réserver un échange', href: '#tunnel-vente' },
 };
+
+/** « 1 200 € / jour · 700 € / demi-journée » — libellé inline des tarifs d'une offre. */
+export const formatOfferPrices = (offer) =>
+  offer.prices.map(({ amount, unit }) => (unit ? `${amount} ${unit}` : amount)).join(' · ');
 
 /* ---------------------------------------------------- 05 POURQUOI NOUS CHOISIR */
 
@@ -391,12 +382,6 @@ export const contact = {
   titleHighlight: 'construisons ensemble',
   intro: "Un projet en tête ? Parlons-en et voyons comment le transformer en impact concret.",
   details: [
-    {
-      icon: 'phone',
-      label: 'Téléphone',
-      value: '+33 6 11 21 95 57',
-      href: 'tel:+33611219557',
-    },
     {
       icon: 'mail',
       label: 'Email',

@@ -119,22 +119,35 @@ export default function Offers({ onSelectOffer }) {
                   {offer.text}
                 </p>
 
-                <p
-                  className={`mt-6 border-t pt-5 font-display text-2xl font-black ${
-                    isFeatured ? 'border-white/25 text-white' : isDark ? 'border-navy-600 text-orange-500' : 'border-cream-deep text-orange-500'
+                <ul
+                  className={`mt-6 border-t pt-5 font-display font-black ${
+                    isFeatured ? 'border-white/25' : isDark ? 'border-navy-600' : 'border-cream-deep'
                   }`}
                 >
-                  {offer.price}
-                  {offer.priceUnit ? (
-                    <span
-                      className={`ml-1.5 font-sans text-xs font-semibold ${
-                        isFeatured ? 'text-white/75' : isDark ? 'text-white/55' : 'text-ink-muted'
-                      }`}
+                  {offer.prices.map(({ amount, unit }, priceIndex) => (
+                    // Le tarif principal est en orange ; les variantes, plus petites, passent
+                    // dans la couleur de texte pleine du fond pour rester bien lisibles.
+                    <li
+                      key={amount}
+                      className={
+                        priceIndex === 0
+                          ? `text-2xl ${isFeatured ? 'text-white' : 'text-orange-500'}`
+                          : `mt-1 text-lg ${isFeatured || isDark ? 'text-white' : 'text-navy-900'}`
+                      }
                     >
-                      {offer.priceUnit}
-                    </span>
-                  ) : null}
-                </p>
+                      {amount}
+                      {unit ? (
+                        <span
+                          className={`ml-1.5 font-sans text-xs font-semibold ${
+                            isFeatured ? 'text-white/75' : isDark ? 'text-white/55' : 'text-ink-muted'
+                          }`}
+                        >
+                          {unit}
+                        </span>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
 
                 <Button
                   href="#tunnel-vente"

@@ -4,7 +4,7 @@ import Media from '../ui/Media';
 import Reveal from '../ui/Reveal';
 import SectionHeader from '../ui/SectionHeader';
 import media from '../../data/media';
-import { contact } from '../../data/site';
+import { contact, formatOfferPrices } from '../../data/site';
 
 /*
  * 09 — CONTACT (planche 10 du PDF).
@@ -42,9 +42,7 @@ export default function Contact({ selectedOffer }) {
 
     setValues((current) => ({
       ...current,
-      message: `Bonjour, je suis intéressé·e par l'offre « ${selectedOffer.title} » (${selectedOffer.price}${
-        selectedOffer.priceUnit ? ` ${selectedOffer.priceUnit}` : ''
-      }).\n\n`,
+      message: `Bonjour, je suis intéressé·e par l'offre « ${selectedOffer.title} » (${formatOfferPrices(selectedOffer)}).\n\n`,
     }));
     setStatus('idle');
     messageRef.current?.focus({ preventScroll: true });
