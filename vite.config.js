@@ -10,8 +10,13 @@ export default defineConfig({
     outDir: 'dist',
     target: 'es2020',
     cssCodeSplit: false,
-    // Une seule page, peu de dépendances : on garde un bundle unique et compact.
+    // Peu de dépendances : on garde un bundle unique et compact.
     rollupOptions: {
+      // Chaque page HTML autonome doit être déclarée ici pour être publiée dans dist/.
+      input: {
+        main: 'index.html',
+        diagnostic: 'diagnostic.html',
+      },
       output: {
         manualChunks: undefined,
       },
