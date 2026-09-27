@@ -10,13 +10,10 @@ export default defineConfig({
     outDir: 'dist',
     target: 'es2020',
     cssCodeSplit: false,
-    // Peu de dépendances : on garde un bundle unique et compact.
+    // Une seule page, peu de dépendances : on garde un bundle unique et compact.
+    // Les pages HTML autonomes (ex. diagnostic.html) vivent dans public/ : copiées telles
+    // quelles, sans recevoir le CSS Tailwind du site.
     rollupOptions: {
-      // Chaque page HTML autonome doit être déclarée ici pour être publiée dans dist/.
-      input: {
-        main: 'index.html',
-        diagnostic: 'diagnostic.html',
-      },
       output: {
         manualChunks: undefined,
       },

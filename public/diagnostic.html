@@ -118,6 +118,7 @@
   fieldset.field{border:0;padding:0;margin:0 0 16px;min-width:0;}
   .field .lbl{padding:0;display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:7px;}
   .field .hint{display:block;font-size:12.5px;color:var(--sub);margin-top:5px;}
+  .field .hint.counter{text-align:right;font-family:'Space Mono',monospace;font-size:11px;}
   input[type=text],input[type=email],input[type=tel],input[type=number],textarea,select{
     width:100%;padding:12px 13px;border-radius:9px;border:1.5px solid var(--line);
     background:var(--bg);color:var(--text);font-family:'Work Sans',sans-serif;font-size:15px;
@@ -560,10 +561,14 @@ function progressBar(){
 /* Tous les champs sont obligatoires : chaque champ porte data-field et un emplacement d'erreur. */
 const ERR_SLOT = '<span class="err"></span>';
 
+/* Longueurs maximales, identiques à celles du Worker (255 = limite d'un champ systeme.io). */
+const MAX_TEXT = 200;
+const MAX_LONG_TEXT = 255;
+
 function fieldText(id, labelTxt, val, type, hint){
   return `<label class="field" data-field="${id}">
     <span class="lbl">${labelTxt} *</span>
-    <input type="${type||'text'}" id="${id}" value="${(val||'').toString().replace(/"/g,'&quot;')}" required/>
+    <input type="${type||'text'}" id="${id}" value="${(val||'').toString().replace(/"/g,'&quot;')}" maxlength="${MAX_TEXT}" required/>
     ${hint?`<span class="hint">${hint}</span>`:''}
     ${ERR_SLOT}
   </label>`;
@@ -572,7 +577,8 @@ function fieldText(id, labelTxt, val, type, hint){
 function fieldTextarea(id, labelTxt, val, hint){
   return `<label class="field" data-field="${id}">
     <span class="lbl">${labelTxt} *</span>
-    <textarea id="${id}" required>${val||''}</textarea>
+    <textarea id="${id}" maxlength="${MAX_LONG_TEXT}" required>${val||''}</textarea>
+    <span class="hint counter" data-counter="${id}">${(val||'').length} / ${MAX_LONG_TEXT} caractères</span>
     ${hint?`<span class="hint">${hint}</span>`:''}
     ${ERR_SLOT}
   </label>`;
@@ -621,6 +627,9 @@ function stepErrors(){
       break;
     case 2:
       choice('projet_type'); ['secteur','description','probleme','cible','diff_marche'].forEach(id=>text(id));
+      ['description','probleme','cible','diff_marche'].forEach(id=>{
+        if((A[id]||'').length > MAX_LONG_TEXT) errs.push({id, msg:`${MAX_LONG_TEXT} caractères maximum.`});
+      });
       break;
     case 3:
       CHECKLIST.forEach(c=>{ if(A.checklist[c.id]===undefined) errs.push({id:'check_'+c.id, msg:'Merci d’indiquer où vous en êtes.'}); });
@@ -684,7 +693,12 @@ function wireOptionGroups(root){
 function bindInputs(root, ids){
   ids.forEach(id=>{
     const elx = q('#'+id, root);
-    if(elx){ elx.addEventListener('input', ()=>{ A[id]=elx.value; clearError(id, root); save(); }); }
+    if(!elx) return;
+    const counter = q(`[data-counter="${id}"]`, root);
+    elx.addEventListener('input', ()=>{
+      A[id]=elx.value; clearError(id, root); save();
+      if(counter) counter.textContent = `${elx.value.length} / ${MAX_LONG_TEXT} caractères`;
+    });
   });
 }
 
@@ -859,7 +873,11 @@ async function submitDiagnostic(){
     return 'Connexion impossible. Vérifiez votre connexion internet puis réessayez.';
   }
   if(res.ok) return null;
-  if(res.status === 422) return 'Certaines réponses n’ont pas pu être validées. Merci de vérifier les étapes précédentes.';
+  if(res.status === 422){
+    const fields = (data.errors || []).map(e=>e.field);
+    if(fields.includes('email')) return 'Votre adresse email a été refusée : elle ne semble pas pouvoir recevoir d’emails. Merci de la corriger à l’étape 1.';
+    return 'Certaines réponses n’ont pas pu être validées. Merci de vérifier les étapes précédentes.';
+  }
   return data.error || 'Envoi impossible pour le moment, merci de réessayer.';
 }
 
