@@ -57,15 +57,22 @@ export default function Founder() {
     <section id="fondateur" className="content-auto relative overflow-hidden">
       {/* ---------------------------------------------------------- Fondateur */}
       <div className="relative isolate bg-navy-900 py-16 lg:py-20">
-        {/* Lueurs orange en fond */}
-        <div
-          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_left_center,rgba(241,90,41,0.55)_0%,transparent_45%),radial-gradient(ellipse_at_right_bottom,rgba(241,90,41,0.25)_0%,transparent_40%)]"
-          aria-hidden="true"
-        />
-
         <div className="shell grid gap-10 lg:grid-cols-[0.42fr_1fr] lg:items-start lg:gap-14">
-          <Reveal variant="left" className="mx-auto w-full max-w-xs lg:max-w-none">
+          <Reveal variant="left" className="relative mx-auto w-full max-w-xs lg:max-w-none">
+            {/* Halo orange autour du portrait, comme sur la maquette : lueurs à gauche et à droite, liseré en pied */}
+            <div className="pointer-events-none absolute -left-40 -top-24 h-80 w-80 rounded-full bg-orange-500/70 blur-3xl" aria-hidden="true" />
+            <div
+              className="pointer-events-none absolute -left-40 -top-24 h-80 w-80 opacity-30 [background:repeating-linear-gradient(135deg,transparent_0_22px,rgba(10,22,40,0.9)_22px_44px)] [mask-image:radial-gradient(circle,#000,transparent_70%)]"
+              aria-hidden="true"
+            />
+            <div className="pointer-events-none absolute -left-16 top-1/3 h-1/3 w-32 rounded-full bg-orange-500/60 blur-3xl" aria-hidden="true" />
+            <div className="pointer-events-none absolute -right-16 top-[55%] h-1/3 w-32 rounded-full bg-orange-500/50 blur-3xl" aria-hidden="true" />
+
             <Media media={media.founderPortrait} fit="cover" className="aspect-[900/1285] w-full shadow-card-hover" />
+            <span
+              className="absolute bottom-0 left-0 h-[3px] w-1/2 bg-[linear-gradient(90deg,#F15A29,transparent)]"
+              aria-hidden="true"
+            />
           </Reveal>
 
           <div>
