@@ -171,6 +171,12 @@ const paths = {
       <path d="M22 9v6" />
     </>
   ),
+  megaphone: (
+    <>
+      <path d="M3 10v4a1 1 0 0 0 1 1h3l8 4V5L7 9H4a1 1 0 0 0-1 1z" />
+      <path d="M18.5 9a4 4 0 0 1 0 6M7 15l1.2 5h2.6L9.8 16.5" />
+    </>
+  ),
   calendar: (
     <>
       <rect x="3.5" y="5" width="17" height="15.5" rx="2" />

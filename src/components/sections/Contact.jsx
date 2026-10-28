@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import Icon from '../ui/Icon';
 import Media from '../ui/Media';
 import Reveal from '../ui/Reveal';
 import SectionHeader from '../ui/SectionHeader';
 import media from '../../data/media';
-import { contact, formatOfferPrices } from '../../data/site';
+import { contact } from '../../data/site';
 
 /*
  * 09 — CONTACT (planche 10 du PDF).
@@ -27,26 +27,10 @@ function validate(values) {
   return errors;
 }
 
-export default function Contact({ selectedOffer }) {
+export default function Contact() {
   const [values, setValues] = useState(EMPTY_FORM);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle'); // idle | sending | sent | error
-  const messageRef = useRef(null);
-
-  /*
-   * « Choisir cette offre » pré-remplit le message et donne le focus au champ,
-   * pour que l'utilisateur arrive dans le tunnel avec son contexte déjà saisi.
-   */
-  useEffect(() => {
-    if (!selectedOffer) return;
-
-    setValues((current) => ({
-      ...current,
-      message: `Bonjour, je suis intéressé·e par l'offre « ${selectedOffer.title} » (${formatOfferPrices(selectedOffer)}).\n\n`,
-    }));
-    setStatus('idle');
-    messageRef.current?.focus({ preventScroll: true });
-  }, [selectedOffer]);
 
   const handleChange = (field) => (event) => {
     const { value } = event.target;
@@ -200,8 +184,7 @@ export default function Contact({ selectedOffer }) {
                     name="message"
                     rows={5}
                     required
-                    ref={messageRef}
-                    value={values.message}
+                        value={values.message}
                     onChange={handleChange('message')}
                     placeholder={contact.form.fields.message.placeholder}
                     aria-invalid={Boolean(errors.message)}

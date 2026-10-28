@@ -50,69 +50,11 @@ export const media = {
     alt: "Les packs de l'Académie des Bâtisseurs : Fondations, Entrepreneuriat, Culture urbaine, Réseau & Impact, communauté privée, guides pratiques, études de cas, templates et plan d'action 90 jours",
   },
 
-  /* -------------------------------------------------------------- 03 BESOIN */
-  needsMeeting: {
-    // Visuel définitif (issu de brainstorming_entrepreneurs_visuel_2_HD.pdf), recadré 1200×800, WebP q72.
-    src: '/images/needs-meeting.webp',
-    alt: '',
-  },
-
-  /* -------------------------------------------------------------- 04 OFFRES */
-  offersDesk: {
-    // Visuel définitif (issu de Bantou_Connexion_Visuel_HD-4.pdf), redimensionné 1200×900, WebP q72.
-    src: '/images/offers-desk.webp',
-    alt: '',
-  },
-
-  /* ------------------------------------------------------------- 05 POURQUOI */
-  whyHandshake: {
-    // Visuel définitif (issu de poignee_de_main_Bantou_Connexion_HD_horizontal-5-1.pdf), recadré 1200×900, WebP q72.
-    src: '/images/why-handshake.webp',
-    alt: '',
-  },
-  whyTestimonial: {
-    // Visuel définitif (issu de 5-2-portrait_femme_vertical_HD.pdf), redimensionné 700×1050, WebP q72.
-    src: '/images/why-testimonial.webp',
-    alt: '',
-  },
-
-  /* -------------------------------------------------------------- 06 IMPACT */
-  impactPortrait: {
-    // Visuel définitif (issu de 6-visuel_urban_bobo_studio.pdf), recadré 1200×600 (2:1), WebP q72.
-    src: '/images/impact-portrait.webp',
-    alt: '',
-  },
-  impactCards: [
-    {
-      src: photo('photo-1573164574472-797cdf4a583a', { w: 700, h: 500 }),
-      alt: '',
-    },
-    {
-      // Visuel définitif (issu de 6-2-Bantou_Connexion_mains_bague_mariage_HD.pdf), redimensionné 800×450, WebP q72.
-      src: '/images/impact-hands.webp',
-      alt: '',
-    },
-    {
-      src: photo('photo-1480714378408-67cf0d13bc1b', { w: 700, h: 500 }),
-      alt: '',
-    },
-    {
-      // Visuel définitif (issu de 6-3-transformer-equipe_diverse_Bantou_Connexion_HD_horizontal.pdf), redimensionné 800×370, WebP q72.
-      src: '/images/impact-team.webp',
-      alt: '',
-    },
-  ],
-
-  /* ---------------------------------------------------------- 07 PARTENAIRES */
-  partnersCompass: {
-    // Visuel définitif (issu de 7-1-rencontre_entrepreneurs_diaspora_afrique_BC_HD.pdf), recadré 1200×900, WebP q72.
-    src: '/images/partners-meeting.webp',
-    alt: '',
-  },
-  partnersTestimonial: {
-    // Visuel définitif (issu de 7-2-portrait_entrepreneur_vertical.pdf), redimensionné 700×933, WebP q72.
-    src: '/images/partners-testimonial.webp',
-    alt: '',
+  /* ---------------------------------------------------------- PARTENAIRES */
+  partnersHandshake: {
+    // Visuel de la maquette V2 (planche 5), recadré 716×410, WebP q88.
+    src: '/images/partenaires-handshake.webp',
+    alt: 'Poignée de main devant une skyline au coucher du soleil',
   },
 
   /* ----------------------------------------------------------- 08 PROCESSUS */

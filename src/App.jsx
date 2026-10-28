@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import CtaBand from './components/ui/CtaBand';
@@ -8,31 +6,21 @@ import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Founder from './components/sections/Founder';
 import Academie from './components/sections/Academie';
-import Needs from './components/sections/Needs';
-import Offers from './components/sections/Offers';
-import WhyUs from './components/sections/WhyUs';
-import Impact from './components/sections/Impact';
 import Partners from './components/sections/Partners';
 import Process from './components/sections/Process';
 import Contact from './components/sections/Contact';
 
-import { contact, impact, needs, offersSection, process } from './data/site';
+import { contact, process } from './data/site';
 
 /*
  * Page unique Bantou Connexion.
  *
- * L'ordre des sections suit strictement l'organigramme du contenu source :
- * Hero → 01 Qui sommes-nous → 02 Fondateur → 03 Besoin → 04 Offres →
- * 05 Pourquoi nous → 06 Impact → 07 Partenaires → 08 Processus → 09 Contact.
+ * Ordre des sections : Hero → Expertises → À propos (fondateur, références) →
+ * Académie → Institutions & Entreprises → Processus → Contact.
  *
  * Les bandeaux « golden hour » ponctuent le parcours, comme dans le PDF.
- *
- * Seul état global : l'offre choisie depuis la section tarifs, qui alimente le
- * message pré-rempli du formulaire de contact.
  */
 export default function App() {
-  const [selectedOffer, setSelectedOffer] = useState(null);
-
   return (
     <>
       {/* Lien d'évitement : première tabulation de la page */}
@@ -50,36 +38,6 @@ export default function App() {
         <About />
         <Founder />
         <Academie />
-        <Needs />
-
-        <CtaBand
-          lead={needs.cta.lead}
-          highlight={needs.cta.highlight}
-          label={needs.cta.label}
-          href={needs.cta.href}
-        />
-
-        <Offers onSelectOffer={setSelectedOffer} />
-
-        <CtaBand
-          lead={offersSection.cta.lead}
-          highlight={offersSection.cta.highlight}
-          text={offersSection.cta.text}
-          label={offersSection.cta.label}
-          href={offersSection.cta.href}
-        />
-
-        <WhyUs />
-        <Impact />
-
-        <CtaBand
-          lead={impact.cta.lead}
-          highlight={impact.cta.highlight}
-          text={impact.cta.text}
-          label={impact.cta.label}
-          href={impact.cta.href}
-        />
-
         <Partners />
         <Process />
 
@@ -91,7 +49,7 @@ export default function App() {
           href={process.cta.href}
         />
 
-        <Contact selectedOffer={selectedOffer} />
+        <Contact />
 
         <CtaBand
           lead={contact.cta.lead}
