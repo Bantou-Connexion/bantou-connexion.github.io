@@ -145,6 +145,25 @@ export const references = {
   ],
 };
 
+/* ------------------------------------------------------------- 04 ACADÉMIE */
+
+export const academie = {
+  num: '04',
+  eyebrow: "L'Académie des Bâtisseurs",
+  titleLead: "Passez de l'idée au ",
+  titleHighlight: 'projet structuré.',
+  intro:
+    "L'Académie des Bâtisseurs réunit des ressources et des parcours de formation pour clarifier votre positionnement, bâtir votre stratégie et organiser votre lancement.",
+  stepsTitle: 'Un parcours en 4 temps',
+  steps: [
+    { num: '01', title: 'Clarifier', text: "Définir l'ambition et le public." },
+    { num: '02', title: 'Structurer', text: "Construire l'offre et le modèle." },
+    { num: '03', title: 'Créer', text: "Préparer l'identité et les supports." },
+    { num: '04', title: 'Déployer', text: 'Organiser la commercialisation et le pilotage.' },
+  ],
+  cta: { label: "Rejoignez l'Académie des Bâtisseurs", href: '#contact' },
+};
+
 /* ---------------------------------------------- 03 LE BESOIN & NOTRE RÉPONSE */
 
 export const needs = {

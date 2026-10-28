@@ -43,6 +43,13 @@ export const media = {
     alt: 'Karym Mbakam « Djomo », fondateur de Bantou Connexion',
   },
 
+  /* ------------------------------------------------------------ 04 ACADÉMIE */
+  academiePacks: {
+    // Visuel de la maquette V2 (planche 4), recadré 900×488, WebP q90.
+    src: '/images/academie-packs.webp',
+    alt: "Les packs de l'Académie des Bâtisseurs : Fondations, Entrepreneuriat, Culture urbaine, Réseau & Impact, communauté privée, guides pratiques, études de cas, templates et plan d'action 90 jours",
+  },
+
   /* -------------------------------------------------------------- 03 BESOIN */
   needsMeeting: {
     // Visuel définitif (issu de brainstorming_entrepreneurs_visuel_2_HD.pdf), recadré 1200×800, WebP q72.

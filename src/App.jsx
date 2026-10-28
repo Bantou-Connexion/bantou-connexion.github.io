@@ -7,6 +7,7 @@ import CtaBand from './components/ui/CtaBand';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Founder from './components/sections/Founder';
+import Academie from './components/sections/Academie';
 import Needs from './components/sections/Needs';
 import Offers from './components/sections/Offers';
 import WhyUs from './components/sections/WhyUs';
@@ -48,6 +49,7 @@ export default function App() {
         <Hero />
         <About />
         <Founder />
+        <Academie />
         <Needs />
 
         <CtaBand
