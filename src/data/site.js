@@ -38,7 +38,7 @@ export const hero = {
   titleHighlight: 'un vrai projet',
   lede: 'Conseil, créations, productions et ingénierie de projets — au service des artistes et entrepreneurs issus de la street culture.',
   primaryCta: { label: "Rejoignez\nl'Académie des Bâtisseurs", href: '#academie', icon: 'graduation' },
-  secondaryCta: { label: 'Réserver un diagnostic', href: '#tunnel-vente', icon: 'calendar' },
+  secondaryCta: { label: 'Réserver un diagnostic', href: '/diagnostic.html', icon: 'calendar' },
 };
 
 /* ------------------------------------------------------------ 02 EXPERTISES */
@@ -192,86 +192,33 @@ export const partners = {
   cta: { label: 'Présenter mon besoin', href: '#contact' },
 };
 
-/* ------------------------------------------- 08 PROCESSUS DE COLLABORATION */
-
-export const process = {
-  num: '08',
-  eyebrow: 'Processus de collaboration',
-  titleLead: 'Cinq étapes, une ',
-  titleHighlight: 'trajectoire claire',
-  intro:
-    "Chez Bantou Connexion, nous suivons une méthode structurée pour transformer vos idées en projets concrets et durables. De l'écoute à la réalisation, nous avançons à vos côtés à chaque étape.",
-  steps: [
-    { num: '01', icon: 'chat', title: 'Écoute & analyse', text: 'Comprendre votre projet, vos objectifs et votre contexte.' },
-    { num: '02', icon: 'target', title: 'Conception stratégique', text: 'Structurer une feuille de route claire et adaptée.' },
-    { num: '03', icon: 'gear', title: 'Co-construction', text: 'Créer et développer les livrables avec vous, à chaque étape.' },
-    { num: '04', icon: 'chart', title: 'Suivi & optimisation', text: 'Ajuster, mesurer et améliorer en continu.' },
-    { num: '05', icon: 'users', title: 'Impact durable', text: 'Consolider les résultats et préparer la suite.' },
-  ],
-  manifesto: {
-    lead: 'Des idées bien accompagnées deviennent des réalités qui ',
-    highlight: 'changent des vies.',
-    author: 'Bantou Connexion',
-  },
-  pillars: [
-    { icon: 'bulb', title: 'Proximité et écoute' },
-    { icon: 'handshake', title: 'Expertise et engagement' },
-    { icon: 'leaf', title: 'Impact durable et partagé' },
-  ],
-  cta: { lead: "Ensemble, passons de ", highlight: "l'idée à l'impact.", text: 'Des solutions concrètes pour des territoires plus forts demain.', label: 'Échanger sur votre projet', href: '#contact' },
-};
-
-/* ------------------------------------------------------------------ 09 CONTACT */
+/* ------------------------------------------------------------------ CONTACT */
 
 export const contact = {
-  num: '09',
   eyebrow: 'Contact',
   titleLead: 'Prenons rendez-vous et ',
   titleHighlight: 'construisons ensemble',
-  intro: "Un projet en tête ? Parlons-en et voyons comment le transformer en impact concret.",
-  details: [
+  intro: 'Un projet, une question ou une collaboration ? Notre équipe est à votre écoute pour échanger et vous proposer une réponse adaptée.',
+  cards: [
     {
-      icon: 'mail',
-      label: 'Email',
-      value: 'contact@bantouconnexion.com',
-      href: 'mailto:contact@bantouconnexion.com',
+      title: 'Contact direct',
+      text: 'Une question, un projet ou une demande de partenariat ? Écrivez-nous.',
+      link: { icon: 'mail', label: 'Email', value: 'contact@bantouconnexion.com', href: 'mailto:contact@bantouconnexion.com' },
     },
     {
-      icon: 'globe',
-      label: 'Site web',
-      value: 'www.bantouconnexion.com',
-      href: 'https://www.bantouconnexion.com',
+      title: 'Site web',
+      text: "Découvrez nos offres, nos projets et toute l'actualité.",
+      link: { icon: 'globe', label: 'Site internet', value: 'www.bantouconnexion.com', href: 'https://www.bantouconnexion.com' },
     },
   ],
-  socials: [
-    { icon: 'facebook', label: 'Facebook', href: '#' },
-    { icon: 'instagram', label: 'Instagram', href: '#' },
-    { icon: 'linkedin', label: 'LinkedIn', href: '#' },
-    { icon: 'youtube', label: 'YouTube', href: '#' },
-  ],
-  form: {
-    title: 'Envoyez-nous un message',
-    subtitle: 'Nous vous recontacterons dans les plus brefs délais.',
-    fields: {
-      name: { label: 'Nom complet', placeholder: 'Votre nom' },
-      email: { label: 'Email', placeholder: 'vous@exemple.com' },
-      message: { label: 'Votre message', placeholder: 'Parlez-nous de votre projet...' },
-    },
-    submitLabel: 'Envoyer ma demande',
-    calendlyLabel: 'Réserver un créneau (Calendly)',
-    successMessage: 'Merci ! Votre demande est bien partie. Nous revenons vers vous rapidement.',
-    /*
-     * Endpoint du formulaire (Formspree, Netlify Forms, API interne…).
-     * Tant qu'il est vide, le formulaire bascule automatiquement sur un envoi
-     * par client mail (mailto:) — le site reste donc fonctionnel dès le déploiement.
-     */
-    endpoint: '',
+  socialsCard: {
+    title: 'Suivez-nous',
+    text: 'Retrouvez nos actualités, nos projets et nos contenus sur les réseaux sociaux.',
+    links: [
+      { icon: 'facebook', label: 'Facebook', href: '#' },
+      { icon: 'instagram', label: 'Instagram', href: '#' },
+      { icon: 'linkedin', label: 'LinkedIn', href: '#' },
+      { icon: 'youtube', label: 'YouTube', href: '#' },
+    ],
   },
-  /* Remplacer par l'URL Calendly réelle avant mise en production. */
-  calendlyUrl: 'https://calendly.com/bantou-connexion/diagnostic',
-  closing: {
-    title: 'Des projets, des rencontres, des opportunités',
-    text: 'Ensemble, faisons émerger des solutions concrètes pour des territoires plus inclusifs, plus innovants et plus durables.',
-  },
-  cta: { lead: 'Ensemble, construisons ', highlight: "des territoires d'opportunités.", text: 'Des solutions concrètes pour un impact durable.', label: 'Démarrons la conversation', href: '#tunnel-vente' },
 };

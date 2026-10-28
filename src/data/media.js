@@ -57,42 +57,10 @@ export const media = {
     alt: 'Poignée de main devant une skyline au coucher du soleil',
   },
 
-  /* ----------------------------------------------------------- 08 PROCESSUS */
-  processSteps: [
-    {
-      src: photo('photo-1517245386807-bb43f82c33c4', { w: 600, h: 460 }),
-      alt: '',
-    },
-    {
-      // Visuel définitif (issu de 8-conception strategique BC_reunion_entrepreneurs_HD.pdf), recadré 800×450, WebP q72.
-      src: '/images/process-strategy.webp',
-      alt: '',
-    },
-    {
-      src: photo('photo-1573164713988-8665fc963095', { w: 600, h: 460 }),
-      alt: '',
-    },
-    {
-      src: photo('photo-1521737711867-e3b97375f902', { w: 600, h: 460 }),
-      alt: '',
-    },
-    {
-      src: photo('photo-1466692476868-aef1dfb1e735', { w: 600, h: 460 }),
-      alt: '',
-    },
-  ],
-
-  /* ------------------------------------------------------------- 09 CONTACT */
-  contactPortrait: {
-    // Visuel définitif (issu de 9 - portrait_bureau_fond_floute_HD_vertical.pdf — même source que founderPortrait),
-    // recadré en bande 5:4 sur le buste, 1000×800, WebP q72.
-    src: '/images/contact-portrait.webp',
-    alt: '',
-  },
-
-  /* --------------------------------------------- BANDEAUX D'APPEL À L'ACTION */
-  ctaBand: {
-    src: photo('photo-1480714378408-67cf0d13bc1b', { w: 1800, h: 620 }),
+  /* ----------------------------------------------------------------- CONTACT */
+  contactSkyline: {
+    // Visuel de la maquette V2 (planche 6), recadré 704×472, WebP q85.
+    src: '/images/contact-skyline.webp',
     alt: '',
   },
 };
