@@ -64,32 +64,84 @@ export const expertises = {
   quoteTail: ' entre ambitions, compétences et culture pour créer un impact durable.',
 };
 
-/* ------------------------------------------------------------- 02 FONDATEUR */
+/* ----------------------------------------------------------- 03 À PROPOS */
+
+/** Segments de texte : `highlight` met le passage en orange gras. */
+const plain = (text) => ({ text });
+const accent = (text) => ({ text, highlight: true });
 
 export const founder = {
-  num: '02',
-  eyebrow: 'Le fondateur',
-  titleLead: "L'ADN du ",
-  titleHighlight: 'projet',
-  lead: "Bantou Connexion est porté par Karym Mbakam « Djomo », entrepreneur, créateur, stratège et producteur de projets à la croisée de la culture, de l'innovation et de l'impact social.",
-  body: "Depuis plus de 20 ans, il conçoit, structure et développe des projets dans les domaines culturels, éducatifs, artistiques, entrepreneuriaux et technologiques, en France et en Afrique. Fondateur de plusieurs initiatives dont Just Human Africa (association loi 1901), il met aujourd'hui son expertise au service des porteurs de projets et des institutions à travers une approche exigeante, humaine et créative.",
-  expertise: [
-    { icon: 'target', label: 'Conception et ingénierie de projets' },
-    { icon: 'chart', label: 'Conseil stratégique et développement' },
-    { icon: 'play', label: 'Création de contenus et direction artistique' },
-    { icon: 'users', label: 'Formation, transmission et accompagnement' },
-    { icon: 'music', label: 'Culture urbaine, musique et industries créatives' },
-    { icon: 'share', label: 'Réseaux institutionnels et partenariats' },
+  num: '03',
+  eyebrow: 'À propos',
+  eyebrowTail: 'Le fondateur',
+  titleLead: "De l'audace à la ",
+  titleHighlight: 'transmission.',
+  paragraphs: [
+    [plain("Tout commence par une conviction : les grandes transformations naissent de la rencontre entre les idées, les cultures et les hommes.")],
+    [
+      plain("Inspirée de l'esprit bantou, où la diversité des peuples, des langues et des traditions nourrit la force du collectif, Bantou Connexion fait de la "),
+      accent("connexion un moteur de création et d'émancipation."),
+    ],
+    [
+      plain('Son fondateur, Karym Mbakam « Djomo », a forgé sa vision dans l\'univers artistique et entrepreneurial, puis consolidé ses compétences par une '),
+      accent("formation en création d'entreprise à Centrale et à l'ESC Lille."),
+    ],
+    [plain("Son parcours lui a enseigné que l'audace ouvre les chemins, mais que la connaissance, la méthode et la solidarité permettent de les construire.")],
+    [plain("Portée par l'esprit de partage, la force du collectif et la richesse de nos héritages, Bantou Connexion cultive une ambition : transformer les talents en bâtisseurs d'avenir.")],
   ],
-  quoteLead: '« Je crois aux idées qui rassemblent, aux projets qui élèvent et aux talents qui ',
-  quoteHighlight: 'construisent le futur.',
-  quoteTail: ' »',
-  signature: { name: 'Karym Mbakam', role: 'DJOMO' },
-  stats: [
-    { value: '+100', label: 'projets accompagnés' },
-    { value: '+50', label: 'partenaires mobilisés' },
-    { value: '+45', label: 'formations & ateliers' },
-    { value: '+33', label: 'projets culturels' },
+  closing: "Car la plus belle des réussites n'est pas seulement ce que l'on construit, mais ce que l'on transmet aux générations futures.",
+};
+
+/* -------------------------------------------------------- NOS RÉFÉRENCES */
+
+const logo = (file, name) => ({ name, src: `/images/references/${file}.webp` });
+
+export const references = {
+  eyebrow: 'À propos',
+  eyebrowTail: 'Nos références',
+  titleLead: 'Des rencontres qui construisent. ',
+  titleHighlight: 'Des collaborations qui inspirent.',
+  intro:
+    "Depuis plus de vingt ans, Karym Mbakam « Djomo » accompagne artistes, institutions, médias et marques dans la réalisation de projets culturels, créatifs et à impact.",
+  groups: [
+    {
+      title: 'Ils nous ont fait confiance',
+      logos: [
+        logo('trust-01', 'Orange'),
+        logo('trust-02', 'Canal+'),
+        logo('trust-03', 'France Télévisions'),
+        logo('trust-04', 'Sony Music'),
+        logo('trust-05', 'Wagram Music'),
+        logo('trust-06', 'Skyrock'),
+        logo('trust-07', 'Générations 88.2 FM'),
+        logo('trust-08', 'Région Île-de-France'),
+        logo('trust-09', 'Sacem'),
+        logo('trust-10', 'Bomaye Music'),
+      ],
+    },
+    {
+      title: 'Nous avons collaboré avec',
+      logos: [
+        logo('collab1-01', 'Grand Corps Malade'),
+        logo('collab1-02', 'MC Solaar'),
+        logo('collab1-03', 'Yassiné Belattar'),
+        logo('collab1-04', 'Thomas Ngijol'),
+        logo('collab1-05', 'Fabrice Éboué'),
+        logo('collab1-06', 'Oxmo Puccino'),
+        logo('collab1-07', 'Amélie Chahbi'),
+        logo('collab1-08', 'Frédéric Chau'),
+        logo('collab1-09', 'Gims'),
+        logo('collab1-10', "Diam's"),
+        logo('collab2-01', 'Orelsan'),
+        logo('collab2-02', "Sexion d'Assaut"),
+        logo('collab2-03', 'Youssoupha'),
+        logo('collab2-04', 'Kery James'),
+        logo('collab2-05', 'Lilian Thuram'),
+        logo('collab2-06', 'Amadou & Mariam'),
+        logo('collab2-07', 'Abd Al Malik'),
+        logo('collab2-08', 'IAM'),
+      ],
+    },
   ],
 };
 

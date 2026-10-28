@@ -36,15 +36,11 @@ export const media = {
     alt: '',
   },
 
-  /* ------------------------------------------------------------ 02 FONDATEUR */
+  /* ------------------------------------------------------------ 03 À PROPOS */
   founderPortrait: {
-    // Visuel définitif (issu de portrait_bureau_fond_floute_HD_vertical.pdf), recadré 900×1100, WebP q72.
+    // Portrait de la maquette V2 (planche 3), recadré 330×404, WebP q90.
     src: '/images/founder-portrait.webp',
-    alt: '',
-  },
-  founderCity: {
-    src: photo('photo-1580060839134-75a5edca2e99', { w: 1800, h: 600 }),
-    alt: '',
+    alt: 'Karym Mbakam « Djomo », fondateur de Bantou Connexion',
   },
 
   /* -------------------------------------------------------------- 03 BESOIN */
