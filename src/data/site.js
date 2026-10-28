@@ -26,7 +26,7 @@ export const navLinks = [
   { id: 'contact', label: 'Contacts' },
 ];
 
-export const navCta = { label: "Rejoignez\nl'Académie des Bâtisseurs", href: '#academie' };
+export const navCta = { label: "Rejoignez\nl'Académie des Bâtisseurs" };
 
 /* --------------------------------------------------------------------- HERO */
 
@@ -35,8 +35,35 @@ export const hero = {
   titleLead: 'Votre idée mérite de devenir',
   titleHighlight: 'un vrai projet',
   lede: 'Conseil, créations, productions et ingénierie de projets — au service des artistes et entrepreneurs issus de la street culture.',
-  primaryCta: { label: "Rejoignez\nl'Académie des Bâtisseurs", href: '#academie', icon: 'graduation' },
-  secondaryCta: { label: 'Réserver un diagnostic', href: '/diagnostic.html', icon: 'calendar' },
+  cta: { label: 'Réserver un diagnostic', icon: 'calendar' },
+};
+
+/* ------------------------------------------------------ MODALE DIAGNOSTIC */
+
+export const diagnostic = {
+  eyebrow: 'Le diagnostic',
+  titleLead: 'Trouvons le bon ',
+  titleHighlight: 'point de départ',
+  intro: 'Avant de choisir une formation ou un accompagnement, identifiez les priorités de votre projet.',
+  closeLabel: 'Fermer la fenêtre',
+  options: [
+    {
+      tone: 'dark',
+      eyebrow: 'Particuliers & indépendants',
+      titleLead: 'Diagnostic stratégique ',
+      titleHighlight: 'de projet',
+      text: 'Un premier regard structuré sur votre projet, ses points forts, ses blocages et ses prochaines étapes.',
+      cta: { label: 'Commencer', action: 'join' },
+    },
+    {
+      tone: 'light',
+      eyebrow: 'Institutions & Entreprises',
+      titleLead: 'Une réponse adaptée ',
+      titleHighlight: 'à vos enjeux',
+      text: "Formation, accompagnement, conception de programme ou ingénierie de projet : nous construisons une proposition adaptée à votre organisation.",
+      cta: { label: 'Demander une proposition sur devis', action: 'quote' },
+    },
+  ],
 };
 
 /* ------------------------------------------------------------ 02 EXPERTISES */
@@ -159,7 +186,7 @@ export const academie = {
     { num: '03', title: 'Créer', text: "Préparer l'identité et les supports." },
     { num: '04', title: 'Déployer', text: 'Organiser la commercialisation et le pilotage.' },
   ],
-  cta: { label: "Rejoignez l'Académie des Bâtisseurs", href: '#contact' },
+  cta: { label: "Rejoignez l'Académie des Bâtisseurs" },
 };
 
 /* ------------------------------------------------ INSTITUTIONS & ENTREPRISES */
@@ -187,7 +214,7 @@ export const partners = {
       { num: '04', title: 'Bilan', text: 'Évaluer les résultats et les perspectives.' },
     ],
   },
-  cta: { label: 'Présenter mon besoin', href: '#contact' },
+  cta: { label: 'Présenter mon besoin' },
 };
 
 /* ------------------------------------------------------------------ CONTACT */
@@ -211,4 +238,98 @@ export const contact = {
       { icon: 'youtube', label: 'YouTube', href: '#' },
     ],
   },
+};
+
+/* ------------------------------------------ MODALE PRISE DE CONTACT INSTITUTIONNELLE */
+
+export const institutionalForm = {
+  id: 'institution',
+  mailSubject: 'Demande institutionnelle',
+  subjectField: 'structure',
+  eyebrow: 'Institutions & Entreprises',
+  titleLead: 'Présentez votre besoin, ',
+  titleHighlight: 'nous revenons vers vous',
+  intro:
+    'Remplissez le formulaire ci-contre afin de nous présenter votre projet. Notre équipe vous contacte pour échanger et vous proposer une solution adaptée.',
+  closeLabel: 'Fermer la fenêtre',
+  formEyebrow: 'Formulaire',
+  formTitle: 'Prise de contact institutionnelle',
+  formIntro:
+    'Partagez les informations clés de votre projet afin que nous puissions vous proposer une réponse adaptée à vos besoins.',
+  fields: [
+    { name: 'structure', label: 'Nom de la structure', placeholder: 'Entreprise, association, collectivité, établissement…', required: true, autoComplete: 'organization', wide: true },
+    { name: 'interlocuteur', label: 'Interlocuteur', placeholder: 'Nom et fonction', required: true, autoComplete: 'name' },
+    { name: 'email', label: 'Courriel professionnel', placeholder: 'nom@structure.fr', required: true, type: 'email', autoComplete: 'email' },
+    { name: 'objectif', label: 'Objectif de votre projet', placeholder: 'Décrivez en quelques lignes votre besoin, vos objectifs et le contexte…', required: true, multiline: true, wide: true },
+    { name: 'public', label: 'Public concerné', placeholder: 'Jeunes, équipes, artistes, entrepreneurs…', required: true },
+    { name: 'calendrier', label: 'Calendrier envisagé', placeholder: 'Période souhaitée', required: true },
+    { name: 'budget', label: 'Budget indicatif (facultatif)', placeholder: 'Montant ou fourchette', wide: true },
+  ],
+  submitLabel: 'Envoyer ma demande',
+  sendingLabel: 'Envoi en cours…',
+  privacy: 'Vos informations sont confidentielles et utilisées uniquement dans le cadre de votre demande.',
+  successMessage: 'Merci ! Votre demande est bien partie. Notre équipe revient vers vous rapidement.',
+  errorMessage: "L'envoi a échoué. Merci de réessayer ou de nous écrire directement à contact@bantouconnexion.com.",
+  requiredError: 'Ce champ est requis.',
+  emailError: 'Cet email ne semble pas valide.',
+  /*
+   * Endpoint du formulaire (Formspree, Netlify Forms, Worker…). Tant qu'il est vide,
+   * la demande s'ouvre dans le client mail du visiteur (mailto:) : rien n'est envoyé
+   * automatiquement.
+   */
+  endpoint: '',
+  mailTo: 'contact@bantouconnexion.com',
+};
+
+/* ------------------------------------------------ MODALE INSCRIPTION ACADÉMIE */
+
+export const registrationForm = {
+  id: 'inscription',
+  mailSubject: "Inscription — Académie des Bâtisseurs",
+  subjectField: 'nom',
+  eyebrow: 'Entrepreneurs, artistes & futurs participants',
+  titleLead: 'Parlez-nous de votre projet, ',
+  titleHighlight: 'nous avançons ensemble',
+  intro:
+    "Que vous soyez entrepreneur, artiste ou futur participant de l'Académie des Bâtisseurs, partagez votre projet avec notre équipe. Nous vous orientons vers le parcours le plus adapté à vos objectifs.",
+  closeLabel: 'Fermer la fenêtre',
+  formEyebrow: 'Formulaire',
+  formTitle: 'Présentez votre projet',
+  formIntro:
+    'Remplissez ce formulaire pour nous permettre de mieux comprendre votre parcours, vos besoins et vos objectifs. Notre équipe vous recontacte rapidement pour échanger et vous proposer un accompagnement adapté.',
+  fields: [
+    {
+      name: 'profil',
+      label: 'Vous êtes',
+      type: 'radio',
+      required: true,
+      wide: true,
+      options: ['Entrepreneur', 'Artiste', "Futur participant de l'Académie des Bâtisseurs"],
+      defaultValue: 'Entrepreneur',
+    },
+    { name: 'nom', label: 'Nom et prénom', placeholder: 'Nom et prénom', required: true, autoComplete: 'name' },
+    { name: 'email', label: 'Courriel', placeholder: 'votre@email.com', required: true, type: 'email', autoComplete: 'email' },
+    { name: 'telephone', label: 'Téléphone', placeholder: 'Votre numéro de téléphone', type: 'tel', autoComplete: 'tel' },
+    { name: 'ville', label: 'Ville / Pays', placeholder: 'Ville, pays', autoComplete: 'address-level2' },
+    { name: 'projet', label: 'Votre projet', placeholder: 'Décrivez votre projet, vos objectifs et le contexte…', required: true, multiline: true, wide: true },
+    {
+      name: 'besoins',
+      label: 'Vos besoins',
+      type: 'checkboxes',
+      required: true,
+      options: ['Conseil stratégique', 'Création & direction artistique', 'Formation & transmission', 'Ingénierie de projets'],
+    },
+    { name: 'echeance', label: 'Échéance souhaitée', placeholder: 'Période envisagée' },
+    { name: 'infos', label: 'Informations complémentaires (facultatif)', placeholder: 'Informations utiles, liens, références…', multiline: true, wide: true },
+  ],
+  submitLabel: 'Envoyer ma demande',
+  sendingLabel: 'Envoi en cours…',
+  privacy: 'Vos informations sont confidentielles et utilisées uniquement dans le cadre de votre demande.',
+  successMessage: 'Merci ! Votre demande est bien partie. Notre équipe revient vers vous rapidement.',
+  errorMessage: "L'envoi a échoué. Merci de réessayer ou de nous écrire directement à contact@bantouconnexion.com.",
+  requiredError: 'Ce champ est requis.',
+  emailError: 'Cet email ne semble pas valide.',
+  /* Même fonctionnement que `institutionalForm.endpoint` : vide = ouverture du client mail. */
+  endpoint: '',
+  mailTo: 'contact@bantouconnexion.com',
 };

@@ -11,7 +11,7 @@ import { partners } from '../../data/site';
  * Bandeau sombre : titre, présentation et poignée de main. Dessous : quatre
  * offres, la méthode en quatre temps et le bouton « Présenter mon besoin ».
  */
-export default function Partners() {
+export default function Partners({ onQuote }) {
   return (
     <section id="partenaires" className="content-auto relative overflow-hidden bg-white">
       {/* ---------------------------------------------------------------- Bandeau */}
@@ -96,7 +96,14 @@ export default function Partners() {
         </Reveal>
 
         <Reveal delay={100} className="mt-8">
-          <Button href={partners.cta.href} variant="gradient" className="px-8 py-4 uppercase">
+          <Button
+            as="button"
+            type="button"
+            onClick={onQuote}
+            aria-haspopup="dialog"
+            variant="gradient"
+            className="px-8 py-4 uppercase"
+          >
             {partners.cta.label}
           </Button>
         </Reveal>

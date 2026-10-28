@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import Button from '../ui/Button';
+import DiagnosticModal from '../ui/DiagnosticModal';
 import Media from '../ui/Media';
 import Reveal from '../ui/Reveal';
 import { Chevron, DiamondBand } from '../ui/GeoAccent';
@@ -11,7 +13,9 @@ import { hero } from '../../data/site';
  * Colonne de texte à gauche sur fond bleu nuit, portrait à découpe diagonale
  * à droite, chevron et trame orange en fond, skyline assombrie en pied.
  */
-export default function Hero() {
+export default function Hero({ onJoin, onQuote }) {
+  const [isDiagnosticOpen, setIsDiagnosticOpen] = useState(false);
+
   return (
     <section id="accueil" className="relative isolate overflow-hidden bg-navy-900 pt-28 lg:pt-32">
       {/* Décor : skyline en pied de section */}
@@ -50,12 +54,17 @@ export default function Hero() {
             <p className="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-white/75">{hero.lede}</p>
           </Reveal>
 
-          <Reveal delay={220} className="mt-9 grid items-stretch gap-4 sm:grid-cols-[1.15fr_1fr]">
-            <Button href={hero.primaryCta.href} variant="gradient" icon={hero.primaryCta.icon} className="h-24 w-full px-8 text-[0.95rem] uppercase">
-              {hero.primaryCta.label}
-            </Button>
-            <Button href={hero.secondaryCta.href} variant="night" icon={hero.secondaryCta.icon} className="h-24 w-full px-8 text-[0.95rem] uppercase [&>svg:first-child]:text-orange-500">
-              {hero.secondaryCta.label}
+          <Reveal delay={220} className="mt-9">
+            <Button
+              as="button"
+              type="button"
+              onClick={() => setIsDiagnosticOpen(true)}
+              aria-haspopup="dialog"
+              variant="night"
+              icon={hero.cta.icon}
+              className="h-24 w-full px-8 text-[0.95rem] uppercase sm:w-auto sm:min-w-[22rem] [&>svg:first-child]:text-orange-500"
+            >
+              {hero.cta.label}
             </Button>
           </Reveal>
         </div>
@@ -79,6 +88,16 @@ export default function Hero() {
           />
         </Reveal>
       </div>
+
+      <DiagnosticModal
+        open={isDiagnosticOpen}
+        onClose={() => setIsDiagnosticOpen(false)}
+        onAction={(action) => {
+          setIsDiagnosticOpen(false);
+          if (action === 'join') onJoin();
+          else onQuote();
+        }}
+      />
     </section>
   );
 }

@@ -171,6 +171,7 @@ const paths = {
       <path d="M22 9v6" />
     </>
   ),
+  close: <path d="M6 6l12 12M18 6 6 18" />,
   megaphone: (
     <>
       <path d="M3 10v4a1 1 0 0 0 1 1h3l8 4V5L7 9H4a1 1 0 0 0-1 1z" />

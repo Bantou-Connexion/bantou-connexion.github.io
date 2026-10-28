@@ -11,7 +11,7 @@ import { academie } from '../../data/site';
  * Fond blanc : titre et présentation à gauche, visuel des packs à droite,
  * puis parcours en quatre temps et bouton d'inscription.
  */
-export default function Academie() {
+export default function Academie({ onJoin }) {
   return (
     <section id="academie" className="content-auto relative overflow-hidden bg-white py-20 lg:py-28">
       <div className="shell">
@@ -57,7 +57,7 @@ export default function Academie() {
         </div>
 
         <Reveal delay={150} className="mt-12">
-          <Button href={academie.cta.href} variant="gradient" className="px-8 py-4 uppercase">
+          <Button as="button" type="button" onClick={onJoin} aria-haspopup="dialog" variant="gradient" className="px-8 py-4 uppercase">
             {academie.cta.label}
           </Button>
         </Reveal>

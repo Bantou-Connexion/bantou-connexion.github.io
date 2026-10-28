@@ -52,7 +52,7 @@ export default function Contact() {
           </Reveal>
         </div>
 
-        <ul className="mt-14 grid gap-5 lg:grid-cols-3">
+        <ul className="mt-14 grid gap-5 lg:grid-cols-[auto_auto_minmax(0,1fr)]">
           {contact.links.map((link, index) => (
             <Reveal key={link.label} as="li" delay={index * 90} className="flex">
               <a
@@ -63,9 +63,9 @@ export default function Contact() {
                 <span className="flex w-16 shrink-0 items-center justify-center bg-orange-500 text-white">
                   <Icon name={link.icon} className="h-7 w-7" strokeWidth={1.6} />
                 </span>
-                <span className="min-w-0 self-center px-5 py-5">
+                <span className="min-w-0 self-center px-4 py-5 sm:px-5">
                   <span className="block text-xs uppercase tracking-[0.14em] text-white/60">{link.label}</span>
-                  <span className="mt-1 block break-words font-display text-[0.95rem] font-bold text-white">
+                  <span className="mt-1 block whitespace-nowrap font-display text-[0.78rem] font-bold text-white sm:text-[0.95rem]">
                     {link.value}
                   </span>
                 </span>

@@ -50,6 +50,13 @@ export const media = {
     alt: "Les packs de l'Académie des Bâtisseurs : Fondations, Entrepreneuriat, Culture urbaine, Réseau & Impact, communauté privée, guides pratiques, études de cas, templates et plan d'action 90 jours",
   },
 
+  /* ------------------------------------------------------ MODALE DIAGNOSTIC */
+  diagnosticTeam: {
+    // Visuel de la maquette V2 (planche 7), recadré 698×401, WebP q88.
+    src: '/images/diagnostic-equipe.webp',
+    alt: 'Trois entrepreneurs échangent autour d’une table de travail',
+  },
+
   /* ---------------------------------------------------------- PARTENAIRES */
   partnersHandshake: {
     // Visuel de la maquette V2 (planche 5), recadré 716×410, WebP q88.
