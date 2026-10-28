@@ -70,7 +70,7 @@ export default function Header() {
 
         {/* Menu principal — desktop */}
         <nav aria-label="Navigation principale" className="hidden shrink-0 lg:block">
-          <ul className="flex items-center gap-5 xl:gap-7">
+          <ul className="flex items-center gap-5 2xl:gap-7">
             {navLinks.map((link) => {
               const isActive = activeId === link.id;
               return (
@@ -78,7 +78,7 @@ export default function Header() {
                   <a
                     href={`#${link.id}`}
                     aria-current={isActive ? 'page' : undefined}
-                    className={`relative whitespace-nowrap font-display text-[0.78rem] font-extrabold uppercase tracking-[0.1em] transition-colors xl:tracking-[0.14em] ${
+                    className={`relative whitespace-nowrap font-display text-[0.78rem] font-extrabold uppercase tracking-[0.1em] transition-colors 2xl:tracking-[0.14em] ${
                       isActive ? 'text-orange-500' : 'text-white/80 hover:text-white'
                     }`}
                   >
@@ -98,7 +98,7 @@ export default function Header() {
 
         <a
           href={navCta.href}
-          className="hidden shrink-0 rounded-sharp bg-[linear-gradient(90deg,#FF7A12_0%,#F5461B_100%)] px-6 py-2.5 text-center font-display text-[0.72rem] font-extrabold uppercase leading-snug tracking-wide text-white transition hover:brightness-110 xl:inline-block"
+          className="hidden shrink-0 rounded-sharp bg-[linear-gradient(90deg,#FF7A12_0%,#F5461B_100%)] px-6 py-2.5 whitespace-pre-line text-center font-display text-[0.72rem] font-extrabold uppercase leading-snug tracking-wide text-white transition hover:brightness-110 xl:inline-block"
         >
           {navCta.label}
         </a>

@@ -8,7 +8,7 @@ import { contact } from '../../data/site';
  * CONTACT (planche 6 de la maquette V2).
  *
  * Bandeau sombre sur skyline au coucher du soleil : titre, présentation, puis
- * trois cartes (email, site web, réseaux sociaux).
+ * l'email, l'adresse du site et une carte réseaux sociaux.
  */
 
 function CardTitle({ children }) {
@@ -53,28 +53,20 @@ export default function Contact() {
         </div>
 
         <ul className="mt-14 grid gap-5 lg:grid-cols-3">
-          {contact.cards.map((card, index) => (
-            <Reveal
-              key={card.title}
-              as="li"
-              delay={index * 90}
-              className="flex flex-col border border-navy-600 bg-navy-900/80 p-6 backdrop-blur-sm"
-            >
-              <CardTitle>{card.title}</CardTitle>
-              <p className="mt-4 text-sm leading-relaxed text-white/80">{card.text}</p>
-
+          {contact.links.map((link, index) => (
+            <Reveal key={link.label} as="li" delay={index * 90} className="flex">
               <a
-                href={card.link.href}
-                {...(card.link.href.startsWith('http') ? { target: '_blank', rel: 'noreferrer noopener' } : {})}
-                className="group mt-6 flex min-w-0 items-stretch border border-navy-600 transition-colors hover:border-orange-500"
+                href={link.href}
+                {...(link.href.startsWith('http') ? { target: '_blank', rel: 'noreferrer noopener' } : {})}
+                className="flex w-full min-w-0 items-stretch border border-navy-600 bg-navy-900/80 backdrop-blur-sm transition-colors hover:border-orange-500"
               >
                 <span className="flex w-16 shrink-0 items-center justify-center bg-orange-500 text-white">
-                  <Icon name={card.link.icon} className="h-7 w-7" strokeWidth={1.6} />
+                  <Icon name={link.icon} className="h-7 w-7" strokeWidth={1.6} />
                 </span>
-                <span className="min-w-0 px-5 py-3.5">
-                  <span className="block text-xs uppercase tracking-[0.14em] text-white/60">{card.link.label}</span>
+                <span className="min-w-0 self-center px-5 py-5">
+                  <span className="block text-xs uppercase tracking-[0.14em] text-white/60">{link.label}</span>
                   <span className="mt-1 block break-words font-display text-[0.95rem] font-bold text-white">
-                    {card.link.value}
+                    {link.value}
                   </span>
                 </span>
               </a>

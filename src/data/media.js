@@ -38,7 +38,7 @@ export const media = {
 
   /* ------------------------------------------------------------ 03 À PROPOS */
   founderPortrait: {
-    // Portrait de la maquette V2 (planche 3), recadré 330×404, WebP q90.
+    // Portrait_Karym_Mbakam.pdf, bande blanche rognée, redimensionné 900×1285, WebP q85.
     src: '/images/founder-portrait.webp',
     alt: 'Karym Mbakam « Djomo », fondateur de Bantou Connexion',
   },

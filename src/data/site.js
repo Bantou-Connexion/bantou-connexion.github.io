@@ -12,9 +12,7 @@ export const brand = {
   name: 'Bantou Connexion',
   tagline: "Des idées d'aujourd'hui pour des villes de demain",
   script: 'Des Territoires qui inspirent',
-  footerKeywords: ['CULTURE', 'INNOVATION', 'TERRITOIRES DURABLES'],
-  legal: '© 2026 Bantou Connexion — France · Afrique · Diaspora',
-  disciplines: 'Conseil · Création · Formation · Ingénierie de projets · Culture urbaine',
+  legal: `© ${new Date().getFullYear()} Bantou Connexion`,
 };
 
 /* --------------------------------------------------------------- NAVIGATION */
@@ -28,7 +26,7 @@ export const navLinks = [
   { id: 'contact', label: 'Contacts' },
 ];
 
-export const navCta = { label: "Rejoignez l'Académie des Bâtisseurs", href: '#academie' };
+export const navCta = { label: "Rejoignez\nl'Académie des Bâtisseurs", href: '#academie' };
 
 /* --------------------------------------------------------------------- HERO */
 
@@ -195,21 +193,13 @@ export const partners = {
 /* ------------------------------------------------------------------ CONTACT */
 
 export const contact = {
-  eyebrow: 'Contact',
+  eyebrow: 'Contacts',
   titleLead: 'Prenons rendez-vous et ',
   titleHighlight: 'construisons ensemble',
   intro: 'Un projet, une question ou une collaboration ? Notre équipe est à votre écoute pour échanger et vous proposer une réponse adaptée.',
-  cards: [
-    {
-      title: 'Contact direct',
-      text: 'Une question, un projet ou une demande de partenariat ? Écrivez-nous.',
-      link: { icon: 'mail', label: 'Email', value: 'contact@bantouconnexion.com', href: 'mailto:contact@bantouconnexion.com' },
-    },
-    {
-      title: 'Site web',
-      text: "Découvrez nos offres, nos projets et toute l'actualité.",
-      link: { icon: 'globe', label: 'Site internet', value: 'www.bantouconnexion.com', href: 'https://www.bantouconnexion.com' },
-    },
+  links: [
+    { icon: 'mail', label: 'Email', value: 'contact@bantouconnexion.com', href: 'mailto:contact@bantouconnexion.com' },
+    { icon: 'globe', label: 'Site internet', value: 'www.bantouconnexion.com', href: 'https://www.bantouconnexion.com' },
   ],
   socialsCard: {
     title: 'Suivez-nous',

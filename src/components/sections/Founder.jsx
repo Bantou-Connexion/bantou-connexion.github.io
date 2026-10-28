@@ -65,7 +65,7 @@ export default function Founder() {
 
         <div className="shell grid gap-10 lg:grid-cols-[0.42fr_1fr] lg:items-start lg:gap-14">
           <Reveal variant="left" className="mx-auto w-full max-w-xs lg:max-w-none">
-            <Media media={media.founderPortrait} fit="cover" className="aspect-[330/404] w-full shadow-card-hover" />
+            <Media media={media.founderPortrait} fit="cover" className="aspect-[900/1285] w-full shadow-card-hover" />
           </Reveal>
 
           <div>
