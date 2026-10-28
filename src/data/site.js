@@ -21,63 +21,47 @@ export const brand = {
 
 export const navLinks = [
   { id: 'accueil', label: 'Accueil' },
-  { id: 'offres', label: 'Offres' },
-  { id: 'apropos', label: 'À propos' },
-  { id: 'impact', label: 'Impact' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'expertises', label: 'Expertises' },
+  { id: 'fondateur', label: 'À propos' },
+  { id: 'academie', label: "L'Académie" },
+  { id: 'partenaires', label: 'Institutions & Entreprises' },
+  { id: 'contact', label: 'Contacts' },
 ];
 
-export const navCta = { label: 'Réserver un diagnostic', href: '#tunnel-vente' };
+export const navCta = { label: "Rejoignez l'Académie des Bâtisseurs", href: '#academie' };
 
 /* --------------------------------------------------------------------- HERO */
 
 export const hero = {
-  eyebrow: 'CONCEVOIR · CONNECTER · CONSTRUIRE',
-  titleLead: 'Transformer vos idées en',
-  titleHighlight: 'projets à impact',
-  lede: "Conseil, création, formation et ingénierie de projets — au service des porteurs d'idées, des institutions et de la culture urbaine.",
-  primaryCta: { label: 'Découvrir nos offres', href: '#offres' },
-  secondaryCta: { label: 'Réserver un diagnostic', href: '#tunnel-vente' },
-  pillars: [
-    { icon: 'target', label: 'Stratégie & conseil' },
-    { icon: 'play', label: 'Création & contenus' },
-    { icon: 'users', label: 'Formation & accompagnement' },
-  ],
+  eyebrow: 'CONCEVOIR / CONSTRUIRE / CONNECTER',
+  titleLead: 'Votre idée mérite de devenir',
+  titleHighlight: 'un vrai projet',
+  lede: 'Conseil, créations, productions et ingénierie de projets — au service des artistes et entrepreneurs issus de la street culture.',
+  primaryCta: { label: "Rejoignez\nl'Académie des Bâtisseurs", href: '#academie', icon: 'graduation' },
+  secondaryCta: { label: 'Réserver un diagnostic', href: '#tunnel-vente', icon: 'calendar' },
 };
 
-/* ------------------------------------------------------- 01 QUI SOMMES-NOUS */
+/* ------------------------------------------------------------ 02 EXPERTISES */
 
-export const about = {
-  num: '01',
-  eyebrow: 'Qui sommes-nous',
-  titleLead: "L'expertise au service des projets et de la",
-  titleHighlight: 'culture urbaine',
-  intro:
-    "Bantou Connexion est une entreprise qui accompagne les créateurs, entrepreneurs, associations, institutions et marques dans la transformation de leurs idées en projets concrets, visibles et finançables — en combinant conseil stratégique, création de contenus, direction artistique, formation et ingénierie de projets, avec une forte empreinte culturelle et urbaine.",
+export const expertises = {
+  num: '02',
+  eyebrow: 'Nos expertises',
+  titleLead: 'Les expertises qui font avancer ',
+  titleHighlight: 'votre projet',
+  intro: "Nous réunissons les compétences nécessaires pour transformer une ambition en plan d'action concret.",
+  items: [
+    { title: 'Conseil stratégique', text: 'Positionnement, modèle économique, offre, feuille de route.' },
+    { title: 'Création & direction artistique', text: 'Identité, narration, contenus et supports de communication.' },
+    { title: 'Formation & transmission', text: 'Méthodes, outils et montée en compétences.' },
+    {
+      title: 'Ingénierie de projets',
+      text: "Cadrage, partenaires, budget prévisionnel et dossiers de financement, sans promesse d'obtention.",
+    },
+  ],
+  outro: "Nous produisons aussi nos propres formats culturels, sonores et éditoriaux : une façon de mettre nos méthodes à l'épreuve du terrain.",
   quoteLead: 'Notre ambition : bâtir des ',
   quoteHighlight: 'passerelles',
-  quoteTail: ' entre ambition, compétence et culture pour créer un impact durable.',
-  quotePillars: ['TALENTS', 'PROJETS', 'TERRITOIRES'],
-  visionMission: [
-    {
-      icon: 'binoculars',
-      title: 'Notre vision',
-      text: "Devenir le partenaire de référence qui révèle les talents, structure les projets et connecte les forces vives de la culture urbaine et du monde professionnel pour construire l'avenir.",
-    },
-    {
-      icon: 'target',
-      title: 'Notre mission',
-      text: "Accompagner nos clients de la conception à la réalisation de leurs projets grâce à des solutions sur mesure en conseil, création, formation et ingénierie — en valorisant la culture urbaine comme levier d'innovation, d'inclusion et de développement économique.",
-    },
-  ],
-  values: [
-    { num: '01', icon: 'bulb', title: 'Créativité', text: 'Une force de transformation au service de chaque projet.' },
-    { num: '02', icon: 'users', title: 'Authenticité', text: 'Des projets ancrés dans des réalités vécues, jamais artificielles.' },
-    { num: '03', icon: 'star', title: 'Excellence', text: 'Un standard exigeant, du diagnostic à la livraison.' },
-    { num: '04', icon: 'handshake', title: 'Engagement', text: 'Une proximité humaine et une écoute réelle des besoins.' },
-    { num: '05', icon: 'share', title: 'Collaboration', text: "Co-construire plutôt qu'imposer, avec chaque partenaire." },
-    { num: '06', icon: 'chart', title: 'Impact social', text: 'Des résultats mesurables, orientés utilité durable.' },
-  ],
+  quoteTail: ' entre ambitions, compétences et culture pour créer un impact durable.',
 };
 
 /* ------------------------------------------------------------- 02 FONDATEUR */

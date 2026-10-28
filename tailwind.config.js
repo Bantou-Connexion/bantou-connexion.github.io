@@ -24,6 +24,7 @@ export default {
           500: '#F15A29', // orange de marque
           400: '#FF6B2C', // survol / dégradés
           300: '#FF8A5B',
+          text: '#B8360F', // texte orange sur fond clair : ≥ 4,8:1 (WCAG AA)
         },
         cream: {
           DEFAULT: '#F6F3EC', // fond clair principal

@@ -45,7 +45,9 @@ export default function Impact() {
                 }`}
               >
                 <div className="flex flex-1 flex-col p-6">
-                  <span className="inline-flex w-fit items-baseline gap-2 border-b-2 border-orange-500 pb-1.5 font-display text-2xl font-black text-orange-500">
+                  <span className={`inline-flex w-fit items-baseline gap-2 border-b-2 border-orange-500 pb-1.5 font-display text-2xl font-black ${
+                    isDark ? 'text-orange-500' : 'text-orange-text'
+                  }`}>
                     {step.year}
                   </span>
                   <h3 className={`mt-4 text-lg ${isDark ? 'text-white' : 'text-navy-900'}`}>{step.title}</h3>

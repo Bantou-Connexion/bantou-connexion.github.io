@@ -80,7 +80,7 @@ export default function Needs() {
                   </span>
                   <div>
                     <h4 className="flex items-baseline gap-2 text-base">
-                      <span className="font-display text-xs font-extrabold text-orange-500">{pillar.num}</span>
+                      <span className="font-display text-xs font-extrabold text-orange-text">{pillar.num}</span>
                       {pillar.title}
                     </h4>
                     <p className="mt-1 text-sm leading-relaxed text-ink-muted">{pillar.text}</p>

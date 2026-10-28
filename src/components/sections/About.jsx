@@ -1,103 +1,68 @@
-import Icon from '../ui/Icon';
 import Media from '../ui/Media';
 import Reveal from '../ui/Reveal';
 import SectionHeader from '../ui/SectionHeader';
-import { DiamondBand } from '../ui/GeoAccent';
 import media from '../../data/media';
-import { about } from '../../data/site';
+import { expertises } from '../../data/site';
 
 /*
- * 01 — QUI SOMMES-NOUS (planche 2 du PDF).
+ * 02 — NOS EXPERTISES (planche 2 de la maquette V2).
  *
- * Fond crème, portrait à découpe diagonale en haut à droite, bandeau de
- * citation sombre sur photo de pont, cartes Vision / Mission à liseré orange,
- * puis grille de six valeurs séparées par de fins filets.
+ * Fond blanc : titre, liste des quatre expertises et paragraphe de clôture à
+ * gauche, visuel à découpe diagonale sur aplat orange à droite, puis bandeau
+ * de citation sombre en pied de section.
  */
 export default function About() {
   return (
-    <section id="apropos" className="content-auto relative overflow-hidden bg-cream py-20 lg:py-28">
-      {/* Décor : trame de losanges en pied de section */}
-      <DiamondBand className="pointer-events-none absolute -bottom-6 right-0 hidden h-40 w-52 text-navy-900/[0.06] lg:block" />
-
+    <section id="expertises" className="content-auto relative overflow-hidden bg-white py-20 lg:py-28">
       <div className="shell relative">
-        <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
-          <SectionHeader
-            num={about.num}
-            eyebrow={about.eyebrow}
-            titleLead={`${about.titleLead} `}
-            titleHighlight={about.titleHighlight}
-            intro={about.intro}
-          />
+        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <SectionHeader
+              num={expertises.num}
+              eyebrow={expertises.eyebrow}
+              titleLead={expertises.titleLead}
+              titleHighlight={expertises.titleHighlight}
+              intro={expertises.intro}
+              accent="text-orange-500" // grand texte sur fond blanc : 3,4:1, suffisant pour AA (≥ 3:1)
+            />
 
-          <Reveal delay={120} variant="right" className="relative hidden lg:block">
-            <div className="absolute -left-6 top-10 h-32 w-32 bg-orange-500/90" aria-hidden="true" />
-            <Media media={media.aboutPortrait} className="clip-diag-br relative aspect-[4/5] w-full shadow-card" />
+            <Reveal as="ul" delay={140} className="mt-8 space-y-5">
+              {expertises.items.map((item) => (
+                <li key={item.title} className="flex gap-4">
+                  <span className="mt-2 block h-2.5 w-2.5 shrink-0 rounded-full bg-orange-500" aria-hidden="true" />
+                  <div>
+                    <h3 className="text-lg">{item.title}</h3>
+                    <p className="mt-0.5 leading-relaxed text-ink-muted">{item.text}</p>
+                  </div>
+                </li>
+              ))}
+            </Reveal>
+
+            <Reveal delay={200}>
+              <p className="mt-8 max-w-xl leading-relaxed text-ink-muted">{expertises.outro}</p>
+            </Reveal>
+          </div>
+
+          <Reveal delay={120} variant="right" className="relative mx-auto w-full max-w-md lg:max-w-none">
+            <div className="absolute -left-4 top-10 h-32 w-8 bg-orange-500/90 sm:-left-6 sm:w-10" aria-hidden="true" />
+            <Media
+              media={media.expertisesPortrait}
+              className="clip-diag-br relative aspect-[31/32] w-full shadow-card"
+            />
           </Reveal>
         </div>
 
         {/* ------------------------------------------------- Bandeau de citation */}
         <Reveal delay={80} className="mt-14">
-          <Media
-            media={media.aboutBridge}
-            className="clip-band relative"
-            imgClassName="absolute inset-0"
-            overlay={
-              <div
-                className="absolute inset-0 bg-[linear-gradient(90deg,#0A1628_0%,rgba(10,22,40,0.9)_55%,rgba(10,22,40,0.6)_100%)]"
-                aria-hidden="true"
-              />
-            }
-          >
-            <div className="relative border-l-4 border-orange-500 px-6 py-9 sm:px-10">
-              <p className="max-w-2xl text-xl font-semibold leading-snug text-white sm:text-2xl">
-                {about.quoteLead}
-                <span className="text-orange-500">{about.quoteHighlight}</span>
-                {about.quoteTail}
-              </p>
-            </div>
-          </Media>
+          <div className="clip-band flex items-center gap-6 bg-navy-900 px-6 py-8 sm:gap-8 sm:px-12">
+            <span className="hidden h-[3px] w-12 shrink-0 bg-orange-500 sm:block" aria-hidden="true" />
+            <p className="max-w-3xl text-xl font-semibold leading-snug text-white sm:text-2xl">
+              {expertises.quoteLead}
+              <span className="text-orange-500">{expertises.quoteHighlight}</span>
+              {expertises.quoteTail}
+            </p>
+          </div>
         </Reveal>
-
-        {/* ------------------------------------------------- Vision & Mission */}
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {about.visionMission.map((card, index) => (
-            <Reveal
-              key={card.title}
-              delay={index * 100}
-              className="border-l-4 border-orange-500 bg-white p-7 shadow-card transition-shadow duration-300 hover:shadow-card-hover sm:p-9"
-            >
-              <span className="flex h-12 w-12 items-center justify-center text-orange-500">
-                <Icon name={card.icon} className="h-9 w-9" strokeWidth={1.5} />
-              </span>
-              <h3 className="mt-4 text-xl">{card.title}</h3>
-              <p className="mt-3 leading-relaxed text-ink-muted">{card.text}</p>
-            </Reveal>
-          ))}
-        </div>
-
-        {/* ------------------------------------------------------- Six valeurs */}
-        <div className="mt-12 grid gap-px overflow-hidden border border-cream-deep bg-cream-deep sm:grid-cols-2 lg:grid-cols-3">
-          {about.values.map((value, index) => (
-            <Reveal
-              key={value.num}
-              delay={(index % 3) * 90}
-              className="group bg-white p-7 transition-colors duration-300 hover:bg-cream"
-            >
-              <div className="flex items-start justify-between gap-4">
-                <span className="font-display text-sm font-extrabold text-orange-500 underline decoration-orange-500/40 underline-offset-4">
-                  {value.num}
-                </span>
-                <Icon
-                  name={value.icon}
-                  className="h-8 w-8 text-orange-500 transition-transform duration-300 group-hover:-translate-y-0.5 motion-reduce:transition-none"
-                  strokeWidth={1.5}
-                />
-              </div>
-              <h3 className="mt-6 text-lg">{value.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-muted">{value.text}</p>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </section>
   );

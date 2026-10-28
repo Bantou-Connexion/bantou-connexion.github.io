@@ -6,6 +6,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: '/',
+  // Autorise les domaines de tunnel (ngrok…) pour partager le site en local.
+  server: { allowedHosts: true },
+  preview: { allowedHosts: true },
   build: {
     outDir: 'dist',
     target: 'es2020',

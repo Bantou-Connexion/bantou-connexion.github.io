@@ -1,5 +1,4 @@
 import Button from '../ui/Button';
-import Icon from '../ui/Icon';
 import Media from '../ui/Media';
 import Reveal from '../ui/Reveal';
 import { Chevron, DiamondBand } from '../ui/GeoAccent';
@@ -32,16 +31,16 @@ export default function Hero() {
       <Chevron className="pointer-events-none absolute -right-10 top-24 hidden h-[26rem] w-56 text-orange-500/90 lg:block" />
       <DiamondBand className="pointer-events-none absolute right-4 top-[26rem] hidden h-32 w-28 text-orange-500/60 xl:block" />
 
-      <div className="shell relative grid items-center gap-12 pb-24 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:pb-32">
+      <div className="shell relative grid items-center gap-12 pb-24 lg:grid-cols-[1.25fr_0.75fr] lg:gap-14 lg:pb-32">
         {/* ------------------------------------------------------- Colonne texte */}
-        <div className="max-w-2xl">
+        <div className="max-w-3xl">
           <Reveal className="flex items-center gap-4">
             <span className="block h-[3px] w-9 shrink-0 bg-orange-500" aria-hidden="true" />
             <span className="font-display text-eyebrow font-extrabold uppercase text-white/70">{hero.eyebrow}</span>
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="mt-6 text-display-xl text-white">
+            <h1 className="mt-6 max-w-2xl text-display-xl text-white">
               {hero.titleLead}{' '}
               <span className="text-orange-500">{hero.titleHighlight}</span>
             </h1>
@@ -51,25 +50,13 @@ export default function Hero() {
             <p className="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-white/75">{hero.lede}</p>
           </Reveal>
 
-          <Reveal delay={220} className="mt-9 flex flex-wrap gap-4">
-            <Button href={hero.primaryCta.href} variant="orange">
+          <Reveal delay={220} className="mt-9 grid items-stretch gap-4 sm:grid-cols-[1.15fr_1fr]">
+            <Button href={hero.primaryCta.href} variant="gradient" icon={hero.primaryCta.icon} className="h-24 w-full px-8 text-[0.95rem] uppercase">
               {hero.primaryCta.label}
             </Button>
-            <Button href={hero.secondaryCta.href} variant="outline">
+            <Button href={hero.secondaryCta.href} variant="night" icon={hero.secondaryCta.icon} className="h-24 w-full px-8 text-[0.95rem] uppercase [&>svg:first-child]:text-orange-500">
               {hero.secondaryCta.label}
             </Button>
-          </Reveal>
-
-          {/* Les trois piliers de l'offre */}
-          <Reveal delay={300} as="ul" className="mt-11 flex flex-wrap gap-x-8 gap-y-5">
-            {hero.pillars.map((pillar) => (
-              <li key={pillar.label} className="flex items-center gap-3">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sharp border border-orange-500/60 text-orange-500">
-                  <Icon name={pillar.icon} className="h-5 w-5" />
-                </span>
-                <span className="text-sm font-semibold text-white/85">{pillar.label}</span>
-              </li>
-            ))}
           </Reveal>
         </div>
 

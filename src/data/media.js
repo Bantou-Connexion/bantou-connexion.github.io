@@ -29,14 +29,10 @@ export const media = {
     alt: '',
   },
 
-  /* ------------------------------------------------------ 01 QUI SOMMES-NOUS */
-  aboutPortrait: {
-    // Visuel définitif (issu de visuel_basket_dunk_artistique_HD.pdf), recadré 900×1000, WebP q72.
-    src: '/images/about-portrait.webp',
-    alt: '',
-  },
-  aboutBridge: {
-    src: photo('photo-1519501025264-65ba15a82390', { w: 1600, h: 520 }),
+  /* ------------------------------------------------------- 02 EXPERTISES */
+  expertisesPortrait: {
+    // Visuel de la maquette V2 (planche 2), recadré 620×640, WebP q85.
+    src: '/images/expertises-portrait.webp',
     alt: '',
   },
 

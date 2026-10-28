@@ -75,7 +75,7 @@ export default function Offers({ onSelectOffer }) {
                   className={`rounded-sharp border-2 px-5 py-2.5 font-display text-[0.76rem] font-extrabold uppercase tracking-wide transition-colors duration-200 ${
                     isActive
                       ? 'border-orange-500 bg-orange-500 text-white'
-                      : 'border-navy-900/15 text-navy-900/70 hover:border-orange-500 hover:text-orange-500'
+                      : 'border-navy-900/15 text-navy-900/70 hover:border-orange-500 hover:text-orange-text'
                   }`}
                 >
                   {filter.label}
@@ -103,7 +103,7 @@ export default function Offers({ onSelectOffer }) {
               >
                 <span
                   className={`self-start rounded-sharp px-2.5 py-1 font-display text-[0.6rem] font-extrabold uppercase tracking-[0.16em] ${
-                    isFeatured ? 'bg-white/20 text-white' : 'bg-orange-500/10 text-orange-500'
+                    isFeatured ? 'bg-white/20 text-white' : `bg-orange-500/10 ${isDark ? 'text-orange-500' : 'text-orange-text'}`
                   }`}
                 >
                   {offer.tag}
@@ -131,7 +131,7 @@ export default function Offers({ onSelectOffer }) {
                       key={amount}
                       className={
                         priceIndex === 0
-                          ? `text-2xl ${isFeatured ? 'text-white' : 'text-orange-500'}`
+                          ? `text-2xl ${isFeatured ? 'text-white' : isDark ? 'text-orange-500' : 'text-orange-text'}`
                           : `mt-1 text-lg ${isFeatured || isDark ? 'text-white' : 'text-navy-900'}`
                       }
                     >

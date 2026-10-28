@@ -39,7 +39,11 @@ export default function Process() {
                 }`}
               >
                 <div className="flex flex-1 flex-col p-6">
-                  <span className="font-display text-3xl font-black leading-none text-orange-500">{step.num}</span>
+                  <span
+                    className={`font-display text-3xl font-black leading-none ${isDark ? 'text-orange-500' : 'text-orange-text'}`}
+                  >
+                    {step.num}
+                  </span>
                   <span className="mt-2 block h-[3px] w-8 bg-orange-500" aria-hidden="true" />
 
                   <h3 className={`mt-4 text-base uppercase tracking-wide ${isDark ? 'text-white' : 'text-navy-900'}`}>

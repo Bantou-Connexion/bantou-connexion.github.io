@@ -164,6 +164,19 @@ const paths = {
     </>
   ),
   chevron: <path d="m9 5 7 7-7 7" />,
+  graduation: (
+    <>
+      <path d="m2 9 10-5 10 5-10 5z" />
+      <path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5" />
+      <path d="M22 9v6" />
+    </>
+  ),
+  calendar: (
+    <>
+      <rect x="3.5" y="5" width="17" height="15.5" rx="2" />
+      <path d="M3.5 10h17M8 3v4M16 3v4" />
+    </>
+  ),
 };
 
 export const iconNames = Object.keys(paths);
