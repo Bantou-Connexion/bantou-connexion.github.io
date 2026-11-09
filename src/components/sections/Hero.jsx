@@ -3,6 +3,7 @@ import Button from '../ui/Button';
 import DiagnosticModal from '../ui/DiagnosticModal';
 import Media from '../ui/Media';
 import Reveal from '../ui/Reveal';
+import VideoModal from '../ui/VideoModal';
 import { Chevron, DiamondBand } from '../ui/GeoAccent';
 import media from '../../data/media';
 import { hero } from '../../data/site';
@@ -15,6 +16,7 @@ import { hero } from '../../data/site';
  */
 export default function Hero({ onJoin, onQuote }) {
   const [isDiagnosticOpen, setIsDiagnosticOpen] = useState(false);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <section id="accueil" className="relative isolate overflow-hidden bg-navy-900 pt-28 lg:pt-32">
@@ -74,20 +76,39 @@ export default function Hero({ onJoin, onQuote }) {
           {/* Aplat orange décalé derrière la photo */}
           <div className="absolute -right-3 -top-5 hidden h-40 w-40 bg-orange-500/90 sm:block" aria-hidden="true" />
 
-          <Media
-            media={media.heroPortrait}
-            priority
-            fit="none"
-            className="clip-diag-tl relative aspect-[4/5] w-full max-w-md shadow-card-hover sm:ml-auto"
-            overlay={
-              <div
-                className="absolute inset-0 bg-[linear-gradient(200deg,transparent_45%,rgba(10,22,40,0.55)_100%)]"
-                aria-hidden="true"
-              />
-            }
-          />
+          <div className="relative w-full max-w-md sm:ml-auto">
+            <Media
+              media={media.heroPortrait}
+              priority
+              fit="none"
+              className="clip-diag-tl relative aspect-[4/5] w-full shadow-card-hover"
+              overlay={
+                <div
+                  className="absolute inset-0 bg-[linear-gradient(200deg,transparent_45%,rgba(10,22,40,0.55)_100%)]"
+                  aria-hidden="true"
+                />
+              }
+            />
+
+            {/* Bouton invisible posé sur le bouton « play » incrusté dans le visuel (centre à 58,5 % / 70,7 %) */}
+            <button
+              type="button"
+              onClick={() => setIsVideoOpen(true)}
+              aria-haspopup="dialog"
+              aria-label={hero.video.openLabel}
+              className="absolute left-[58.5%] top-[70.7%] aspect-square w-[30%] -translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+            />
+          </div>
         </Reveal>
       </div>
+
+      <VideoModal
+        open={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        src={hero.video.src}
+        title={hero.video.title}
+        closeLabel={hero.video.closeLabel}
+      />
 
       <DiagnosticModal
         open={isDiagnosticOpen}

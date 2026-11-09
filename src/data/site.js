@@ -36,6 +36,12 @@ export const hero = {
   titleHighlight: 'un vrai projet',
   lede: 'Conseil, créations, productions et ingénierie de projets — au service des artistes et entrepreneurs issus de la street culture.',
   cta: { label: 'Réserver un diagnostic', icon: 'calendar' },
+  video: {
+    src: '/videos/presentation-1.mp4',
+    openLabel: 'Lire la vidéo de présentation de Bantou Connexion',
+    title: 'Vidéo de présentation',
+    closeLabel: 'Fermer la vidéo',
+  },
 };
 
 /* ------------------------------------------------------ MODALE DIAGNOSTIC */
